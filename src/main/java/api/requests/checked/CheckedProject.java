@@ -1,7 +1,6 @@
 package api.requests.checked;
 
 import api.models.Project;
-import api.models.User;
 import api.requests.CrudInterface;
 import api.requests.unchecked.UncheckedProject;
 import io.restassured.specification.RequestSpecification;

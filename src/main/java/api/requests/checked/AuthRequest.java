@@ -7,7 +7,7 @@ import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_OK;
 
 public class AuthRequest {
-    private User user;
+    private final User user;
 
     public AuthRequest(User user) {
         this.user = user;

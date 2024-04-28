@@ -1,6 +1,5 @@
 package api.requests.checked;
 
-import api.config.Config;
 import api.models.AuthSettings;
 import api.requests.Request;
 import io.restassured.specification.RequestSpecification;
