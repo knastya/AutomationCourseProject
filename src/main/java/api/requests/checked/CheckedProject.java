@@ -1,6 +1,6 @@
 package api.requests.checked;
 
-import api.models.Project;
+import api.models.NewProjectDescription;
 import api.requests.CrudInterface;
 import api.requests.unchecked.UncheckedProject;
 import io.restassured.specification.RequestSpecification;
@@ -15,18 +15,18 @@ public class CheckedProject implements CrudInterface {
     }
 
     @Override
-    public Project create(Object obj) {
+    public NewProjectDescription create(Object obj) {
         return new UncheckedProject(spec).create(obj)
                 .then().assertThat().statusCode(HttpStatus.SC_OK)
-                .extract().as(Project.class);
+                .extract().as(NewProjectDescription.class);
     }
 
     @Override
-    public Project get(String id) {
+    public NewProjectDescription get(String id) {
         return new UncheckedProject(spec)
                 .get(id)
                 .then().assertThat().statusCode(HttpStatus.SC_OK)
-                .extract().as(Project.class);
+                .extract().as(NewProjectDescription.class);
     }
 
     @Override

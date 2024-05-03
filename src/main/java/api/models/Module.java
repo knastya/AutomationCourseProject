@@ -24,7 +24,7 @@ public class Module {
                 .name("Default")
                 .properties(defaultProperty())
                 .build();
-    }//HTTP-Basic
+    }
 
     public static Module httpBasic(){
        return Module.builder().name("HTTP-Basic").build();

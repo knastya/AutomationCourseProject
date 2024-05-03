@@ -13,4 +13,9 @@ public enum RoleId {
     AGENT_MANAGER("AGENT_MANAGER");
 
     private final String text;
+
+    @Override
+    public String toString() {
+        return text;
+    }
 }

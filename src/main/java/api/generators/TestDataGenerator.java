@@ -5,6 +5,8 @@ import api.models.*;
 
 import java.util.Collections;
 
+import static api.enums.RoleId.SYSTEM_ADMIN;
+
 public class TestDataGenerator {
 
     public static TestData generate() {
@@ -14,7 +16,7 @@ public class TestDataGenerator {
                 .email(RandomData.getString() + "@gmail.com")
                 .roles(Roles.builder()
                         .role(Collections.singletonList(Role.builder()
-                                .roleId("SYSTEM_ADMIN")
+                                .roleId(SYSTEM_ADMIN)
                                 .scope("g")
                                 .build()))
                         .build())
@@ -22,7 +24,7 @@ public class TestDataGenerator {
         var project = NewProjectDescription
                 .builder()
                 .parentProject(Project.builder()
-                        .locator("_Root")
+                        .locator("id:_Root")
                         .build())
                 .name(RandomData.getString())
                 .id(RandomData.getString())
@@ -44,7 +46,7 @@ public class TestDataGenerator {
         return Roles.builder().role
                 (Collections.singletonList(
                         Role.builder()
-                                .roleId(roleId.getText())
+                                .roleId(roleId)
                                 .scope(scope)
                                 .build()))
                 .build();

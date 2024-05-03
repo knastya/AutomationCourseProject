@@ -32,7 +32,7 @@ public class Property {
                     Arrays.asList(
                             new Property("usersCanResetOwnPasswords", true),
                             new Property("usersCanChangeOwnPasswords", true),
-                            new Property("usersCanChangeOwnPasswords", false))
+                            new Property("freeRegistrationAllowed", false))
             );
         }};
     }
