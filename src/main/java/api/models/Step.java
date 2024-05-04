@@ -1,15 +1,14 @@
 package api.models;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Property {
+@AllArgsConstructor
+public class Step {
     private String name;
-    private Object value;
+    private String type;
+    private Properties properties;
 }

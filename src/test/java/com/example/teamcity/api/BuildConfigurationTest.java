@@ -1,10 +1,6 @@
 package com.example.teamcity.api;
 
-import api.requests.checked.CheckedProject;
-
 import org.testng.annotations.Test;
-
-import static api.spec.Specifications.authSpec;
 
 public class BuildConfigurationTest extends BaseApiTest {
 
@@ -12,9 +8,10 @@ public class BuildConfigurationTest extends BaseApiTest {
     public void buildConfigurationTest() {
         var testData = testDataStorage.addTestData();
 
-        checkedWithSuperUser.getUserRequest().create(testData.getUser());
-        var project = new CheckedProject(authSpec(testData.getUser()))
-                .create(testData.getProject());
+        var project = checkedWithSuperUser.getProjectRequest().create(testData.getProject());
         softy.assertThat(project.getId()).isEqualTo(testData.getProject().getId());
+
+        var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(testData.getBuildType());
+        softy.assertThat(buildConfig.getId()).isEqualTo(testData.getBuildType().getId());
     }
 }

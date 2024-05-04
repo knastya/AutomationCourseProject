@@ -3,11 +3,12 @@ package api.generators;
 import api.enums.RoleId;
 import api.models.*;
 
-import java.util.Collections;
-
 import static api.enums.RoleId.SYSTEM_ADMIN;
+import static java.util.Collections.singletonList;
 
 public class TestDataGenerator {
+
+    public static final String ROOT = "_Root";
 
     public static TestData generate() {
         var user = User.builder()
@@ -15,20 +16,23 @@ public class TestDataGenerator {
                 .password(RandomData.getString())
                 .email(RandomData.getString() + "@gmail.com")
                 .roles(Roles.builder()
-                        .role(Collections.singletonList(Role.builder()
+                        .role(singletonList(Role.builder()
                                 .roleId(SYSTEM_ADMIN)
                                 .scope("g")
                                 .build()))
                         .build())
                 .build();
-        var project = NewProjectDescription
+        var newProjectDescription = NewProjectDescription
                 .builder()
                 .parentProject(Project.builder()
-                        .locator("id:_Root")
+                        .locator("id:" + ROOT)
                         .build())
                 .name(RandomData.getString())
                 .id(RandomData.getString())
                 .copyAllAssociatedSettings(true)
+                .build();
+        var project = Project.builder()
+                .id(newProjectDescription.getId())
                 .build();
         var buildType = BuildType.builder()
                 .id(RandomData.getString())
@@ -37,18 +41,16 @@ public class TestDataGenerator {
                 .build();
         return TestData.builder()
                 .user(user)
-                .project(project)
+                .project(newProjectDescription)
                 .buildType(buildType)
                 .build();
     }
 
     public static Roles generateRoles(RoleId roleId, String scope) {
-        return Roles.builder().role
-                (Collections.singletonList(
-                        Role.builder()
-                                .roleId(roleId)
-                                .scope(scope)
-                                .build()))
+        var role = Role.builder()
+                .roleId(roleId)
+                .scope(scope)
                 .build();
+        return Roles.builder().role(singletonList(role)).build();
     }
 }

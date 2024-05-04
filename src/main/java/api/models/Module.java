@@ -5,11 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-import java.util.Map;
-
-import static api.models.Property.defaultProperty;
-import static api.models.Property.ldapProperty;
+import static api.models.Properties.defaultProperties;
+import static api.models.Properties.ldapProperties;
 
 @Builder
 @Data
@@ -17,23 +14,23 @@ import static api.models.Property.ldapProperty;
 @NoArgsConstructor
 public class Module {
     private String name;
-    private Map<String, List<Property>> properties;
+    private Properties properties;
 
     public static Module defaultModule() {
         return Module.builder()
                 .name("Default")
-                .properties(defaultProperty())
+                .properties(defaultProperties())
                 .build();
     }
 
-    public static Module httpBasic(){
-       return Module.builder().name("HTTP-Basic").build();
+    public static Module httpBasic() {
+        return Module.builder().name("HTTP-Basic").build();
     }
 
     public static Module ldapModule() {
         return Module.builder()
                 .name("LDAP")
-                .properties(ldapProperty())
+                .properties(ldapProperties())
                 .build();
     }
 

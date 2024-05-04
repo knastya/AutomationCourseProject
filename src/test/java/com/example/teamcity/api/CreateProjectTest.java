@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
 
+import static api.generators.TestDataGenerator.ROOT;
 import static java.lang.String.format;
 import static org.apache.commons.lang3.RandomStringUtils.*;
 import static org.apache.hc.core5.http.HttpStatus.*;
@@ -146,6 +147,14 @@ public class CreateProjectTest extends BaseApiTest {
                 .create(projectTestData)
                 .then().assertThat().statusCode(SC_SUCCESS);
     }
+
+    @Test
+    public void checkCreateProjectWithRootProjectParentId() {
+        var project = checkedWithSuperUser.getProjectRequest().create(projectTestData);
+        softy.assertThat(project.getParentProjectId()).isEqualTo(ROOT);
+        softy.assertThat(project.getParentProject().getId()).isEqualTo(ROOT);
+    }
+
 
     @Test
     public void checkCreateProjectWithOtherProjectParentId() {

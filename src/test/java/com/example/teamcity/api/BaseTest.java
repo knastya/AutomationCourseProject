@@ -1,7 +1,7 @@
 package com.example.teamcity.api;
 
 import api.models.AuthSettings;
-import api.models.Module;
+import api.models.Modules;
 import api.requests.checked.CheckedAuthSettings;
 import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.AfterMethod;
@@ -18,11 +18,10 @@ public class BaseTest {
 
     @BeforeSuite
     public void setup() {
-        Map<String, List<Module>> modules = new HashMap<>() {{
-            put("module", Arrays.asList(
-                    httpBasic(), defaultModule(), tokenAuthModule(), ldapModule())
-            );
-        }};
+        Modules modules = Modules.builder()
+                .module(Arrays.asList(
+                        httpBasic(), defaultModule(), tokenAuthModule(), ldapModule()
+                )).build();
         AuthSettings authSettings = new AuthSettings(true, modules);
         new CheckedAuthSettings(superUserSpec()).update(authSettings);
     }

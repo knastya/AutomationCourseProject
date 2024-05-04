@@ -1,15 +1,14 @@
 package api.models;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
+import java.util.List;
+
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Property {
-    private String name;
-    private Object value;
+@AllArgsConstructor
+public class Steps {
+    private List<Step> step;
 }
