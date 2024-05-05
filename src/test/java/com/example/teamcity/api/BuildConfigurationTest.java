@@ -10,14 +10,15 @@ import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-import static api.models.Step.*;
+import static api.models.Step.buildCommandLineStep;
+import static api.models.Step.buildPowerShellStep;
 import static java.lang.String.format;
 import static org.apache.commons.lang3.RandomStringUtils.*;
 import static org.apache.hc.core5.http.HttpStatus.*;
 import static org.hamcrest.Matchers.containsString;
 
 public class BuildConfigurationTest extends BaseApiTest {
-    //TODO: revise method names
+
     private BuildType buildConfigTestData;
     private NewProjectDescription projectTestData;
 
@@ -27,12 +28,6 @@ public class BuildConfigurationTest extends BaseApiTest {
         buildConfigTestData = testData.getBuildType();
         projectTestData = testData.getProject();
         checkedWithSuperUser.getProjectRequest().create(projectTestData);
-    }
-
-    @Test
-    public void buildConfigurationTest() {
-        var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
-        softy.assertThat(buildConfig.getId()).isEqualTo(buildConfigTestData.getId());
     }
 
     @DataProvider
@@ -50,14 +45,14 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
     @Test(dataProvider = "correctNamesProvider")
-    public void checkNameFieldInCreateBuildConfigRequest(String nameToCheck) {
+    public void createBuildConfigRequestWithCorrectNameShouldPass(String nameToCheck) {
         buildConfigTestData.setName(nameToCheck);
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
         softy.assertThat(buildConfig.getName()).isEqualTo(nameToCheck);
     }
 
     @Test
-    public void createBuildConfigWithExistedNameFails() {
+    public void createBuildConfigRequestWithExistedNameInSameProjectShouldFail() {
         var buildConfigTestData2 = testDataStorage.addTestData().getBuildType();
         buildConfigTestData2.getProject().setId(buildConfigTestData.getProject().getId());
         buildConfigTestData2.setName(buildConfigTestData.getName());
@@ -74,7 +69,7 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
     @Test
-    public void createBuildConfigWithExistedNameInOtherProjectPasses() {
+    public void createBuildConfigRequestWithExistedNameInOtherProjectShouldPass() {
         checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
 
         var testData2 = testDataStorage.addTestData();
@@ -91,7 +86,7 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
     @Test
-    public void checkCreateBuildConfigWithoutNameFails() {
+    public void createBuildConfigRequestWithoutNameShouldFail() {
         buildConfigTestData.setName(null);
         uncheckedWithSuperUser.getBuildConfigRequest()
                 .create(buildConfigTestData)
@@ -112,7 +107,7 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
     @Test(dataProvider = "correctIdsProvider")
-    public void checkIdFieldInCreateBuildConfigRequest(String idToCheck) {
+    public void createBuildConfigRequestWithCorrectIdShouldPass(String idToCheck) {
         buildConfigTestData.setId(idToCheck);
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
         softy.assertThat(buildConfig.getId()).isEqualTo(buildConfigTestData.getId());
@@ -131,7 +126,7 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
     @Test(dataProvider = "incorrectIdsProvider")
-    public void checkIdFieldInCreateBuildConfigRequestFails(String idToCheck) {
+    public void createBuildConfigRequestWithIncorrectIdShouldFail(String idToCheck) {
         buildConfigTestData.setId(idToCheck);
         uncheckedWithSuperUser.getBuildConfigRequest()
                 .create(buildConfigTestData)
@@ -143,7 +138,7 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
     @Test
-    public void createBuildConfigWithExistedIdOnSameProjectFails() {
+    public void createBuildConfigRequestWithExistedIdInSameProjectShouldFail() {
         var buildConfigTestData2 = testDataStorage.addTestData().getBuildType();
         buildConfigTestData2.getProject().setId(buildConfigTestData.getProject().getId());
         buildConfigTestData2.setId(buildConfigTestData.getId());
@@ -160,7 +155,7 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
     @Test
-    public void createBuildConfigWithExistedIdOnDifferentProjectFails() {
+    public void createBuildConfigRequestWithExistedIdInDifferentProjectShouldFail() {
         var testData2 = testDataStorage.addTestData();
         var projectTestData2 = testData2.getProject();
 
@@ -182,14 +177,14 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
     @Test
-    public void checkCreateBuildConfigWithoutIdPasses() {
+    public void createBuildConfigRequestWithoutIdShouldPass() {
         buildConfigTestData.setId(null);
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
         softy.assertThat(buildConfig.getId()).isNotEmpty();
     }
 
     @Test
-    public void checkCreateBuildConfigWithNonExistedProjectParentNegative() {
+    public void createBuildConfigRequestWithNonExistedProjectShouldFail() {
         var id = "notExisted";
         buildConfigTestData.getProject().setId(id);
 
@@ -205,16 +200,16 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
     @Test
-    public void checkCreateBuildConfigWithoutStepsPasses() {
+    public void createBuildConfigRequestWithoutStepsShouldPass() {
         buildConfigTestData.setSteps(null);
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
         softy.assertThat(buildConfig.getSteps().getCount()).isEqualTo(0);
         softy.assertThat(buildConfig.getSteps().getStep()).isNull();
     }
 
-    //3. два степа
+
     @Test
-    public void checkCreateBuildConfigSteps() {
+    public void createBuildConfigRequestWithCommandLineStepsShouldPass() {
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
 
         softy.assertThat(buildConfig.getSteps().getCount()).isEqualTo(1);
@@ -222,7 +217,7 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
     @Test
-    public void checkCreateBuildConfigPowerShellSteps() {
+    public void createBuildConfigRequestWithPowerShellStepsShouldPass() {
         buildConfigTestData.setSteps(new Steps(buildPowerShellStep()));
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
 
@@ -231,7 +226,7 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
     @Test
-    public void checkCreateBuildConfigWithTwoSteps() {
+    public void createBuildConfigRequestWithTwoStepsShouldPass() {
         var steps = Steps.builder()
                 .step(Arrays.asList(buildCommandLineStep(), buildPowerShellStep()))
                 .build();

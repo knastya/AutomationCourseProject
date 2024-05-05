@@ -14,11 +14,11 @@ import static org.apache.hc.core5.http.HttpStatus.*;
 import static org.hamcrest.Matchers.containsString;
 
 public class CreateProjectTest extends BaseApiTest {
-    //TODO: revise method names
+
     private NewProjectDescription projectTestData;
 
     @BeforeMethod
-    public void before(){
+    public void before() {
         projectTestData = testDataStorage.addTestData().getProject();
     }
 
@@ -36,14 +36,14 @@ public class CreateProjectTest extends BaseApiTest {
     }
 
     @Test(dataProvider = "correctNamesProvider")
-    public void checkNameFieldInCreateProjectRequest(String nameToCheck) {
+    public void createProjectRequestWithCorrectNameShouldPass(String nameToCheck) {
         projectTestData.setName(nameToCheck);
         var project = checkedWithSuperUser.getProjectRequest().create(projectTestData);
         softy.assertThat(project.getName()).isEqualTo(nameToCheck);
     }
 
     @Test
-    public void createProjectWithEmptyNameFails() {
+    public void createProjectRequestWithEmptyNameShouldFail() {
         projectTestData.setName(" ");
         uncheckedWithSuperUser.getProjectRequest()
                 .create(projectTestData)
@@ -52,7 +52,7 @@ public class CreateProjectTest extends BaseApiTest {
     }
 
     @Test
-    public void createProjectWithExistedNameFails() {
+    public void createProjectRequestWithExistedNameShouldFail() {
         var projectTestData2 = testDataStorage.addTestData().getProject();
         projectTestData2.setName(projectTestData.getName());
 
@@ -68,7 +68,7 @@ public class CreateProjectTest extends BaseApiTest {
     }
 
     @Test
-    public void checkCreateProjectWithoutNameFails() {
+    public void createProjectRequestWithoutNameShouldFail() {
         projectTestData.setName(null);
         uncheckedWithSuperUser.getProjectRequest()
                 .create(projectTestData)
@@ -87,7 +87,7 @@ public class CreateProjectTest extends BaseApiTest {
     }
 
     @Test(dataProvider = "correctIdsProvider")
-    public void checkIdFieldInCreateProjectRequest(String idToCheck) {
+    public void createProjectRequestWithCorrectIdShouldPass(String idToCheck) {
         projectTestData.setId(idToCheck);
         var project = checkedWithSuperUser.getProjectRequest().create(projectTestData);
         softy.assertThat(project.getId()).isEqualTo(projectTestData.getId());
@@ -106,7 +106,7 @@ public class CreateProjectTest extends BaseApiTest {
     }
 
     @Test(dataProvider = "incorrectIdsProvider")
-    public void checkIdFieldInCreateProjectRequestFails(String idToCheck) {
+    public void createProjectRequestWithIncorrectIdShouldFail(String idToCheck) {
         projectTestData.setId(idToCheck);
         uncheckedWithSuperUser.getProjectRequest()
                 .create(projectTestData)
@@ -118,7 +118,7 @@ public class CreateProjectTest extends BaseApiTest {
     }
 
     @Test
-    public void createProjectWithExistedIdFails() {
+    public void createProjectRequestWithExistedIdShouldFail() {
         var projectTestData2 = testDataStorage.addTestData().getProject();
         projectTestData2.setId(projectTestData.getId());
 
@@ -134,14 +134,14 @@ public class CreateProjectTest extends BaseApiTest {
     }
 
     @Test
-    public void checkCreateProjectWithoutIdPasses() {
+    public void createProjectRequestWithoutIdShouldPass() {
         projectTestData.setId(null);
         var project = checkedWithSuperUser.getProjectRequest().create(projectTestData);
         softy.assertThat(project.getId()).isNotEmpty();
     }
 
     @Test
-    public void checkCopyAllAssociatedSettingsFieldInCreateProjectRequest() {
+    public void createProjectRequestWithCopyAllAssociatedSettingsFieldFalseShouldPass() {
         projectTestData.setCopyAllAssociatedSettings(false);
         uncheckedWithSuperUser.getProjectRequest()
                 .create(projectTestData)
@@ -149,15 +149,14 @@ public class CreateProjectTest extends BaseApiTest {
     }
 
     @Test
-    public void checkCreateProjectWithRootProjectParentId() {
+    public void createProjectRequestWithRootProjectParentIdInLocatorShouldPass() {
         var project = checkedWithSuperUser.getProjectRequest().create(projectTestData);
         softy.assertThat(project.getParentProjectId()).isEqualTo(ROOT);
         softy.assertThat(project.getParentProject().getId()).isEqualTo(ROOT);
     }
 
-
     @Test
-    public void checkCreateProjectWithOtherProjectParentId() {
+    public void createProjectRequestWithOtherProjectParentIdInLocatorShouldPass() {
         checkedWithSuperUser.getProjectRequest().create(projectTestData);
 
         var projectTestData2 = testDataStorage.addTestData().getProject();
@@ -170,7 +169,7 @@ public class CreateProjectTest extends BaseApiTest {
     }
 
     @Test
-    public void checkCreateProjectWithOtherProjectParentName() {
+    public void createProjectRequestWithProjectParentNameInLocatorShouldPass() {
         checkedWithSuperUser.getProjectRequest().create(projectTestData);
 
         var projectTestData2 = testDataStorage.addTestData().getProject();
@@ -183,7 +182,7 @@ public class CreateProjectTest extends BaseApiTest {
     }
 
     @Test
-    public void checkCreateProjectWithNonExistedProjectParentNegative() {
+    public void createProjectRequestWithNonExistedProjectParentShouldFail() {
         var id = "notExisted";
         var locator = "id:" + id;
         projectTestData.setParentProject(Project.builder().locator(locator).build());
@@ -192,9 +191,9 @@ public class CreateProjectTest extends BaseApiTest {
                 .create(projectTestData)
                 .then().assertThat().statusCode(SC_NOT_FOUND)
                 .body(containsString(format("NotFoundException: No project found by locator 'count:1,%s'." +
-                        " Project cannot be found by external id '%s'." +
-                        "\nCould not find the entity requested." +
-                        " Check the reference is correct and the user has permissions to access the entity.",
+                                " Project cannot be found by external id '%s'." +
+                                "\nCould not find the entity requested." +
+                                " Check the reference is correct and the user has permissions to access the entity.",
                         locator, id)
                 ));
     }
