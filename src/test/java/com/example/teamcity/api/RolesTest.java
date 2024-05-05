@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import static api.enums.RoleId.PROJECT_ADMIN;
 import static api.enums.RoleId.SYSTEM_ADMIN;
 import static api.generators.TestDataGenerator.generateRoles;
+import static api.generators.TestDataGenerator.projectScope;
 import static api.spec.Specifications.authSpec;
 import static api.spec.Specifications.unAuthSpec;
 import static java.lang.String.format;
@@ -57,7 +58,7 @@ public class RolesTest extends BaseApiTest {
         checkedWithSuperUser.getProjectRequest().create(testData.getProject());
 
         testData.getUser().setRoles(
-                generateRoles(PROJECT_ADMIN, "p:" + testData.getProject().getId())
+                generateRoles(PROJECT_ADMIN, projectScope(testData.getProject().getId()))
         );
 
         checkedWithSuperUser.getUserRequest().create(testData.getUser());
@@ -77,13 +78,13 @@ public class RolesTest extends BaseApiTest {
         checkedWithSuperUser.getProjectRequest().create(secondTestData.getProject());
 
         firstTestData.getUser().setRoles(
-                generateRoles(PROJECT_ADMIN, "p:" + firstTestData.getProject().getId())
+                generateRoles(PROJECT_ADMIN, projectScope(firstTestData.getProject().getId()))
         );
 
         checkedWithSuperUser.getUserRequest().create(firstTestData.getUser());
 
         secondTestData.getUser().setRoles(
-                generateRoles(PROJECT_ADMIN, "p:" + secondTestData.getProject().getId())
+                generateRoles(PROJECT_ADMIN, projectScope(secondTestData.getProject().getId()))
         );
 
         checkedWithSuperUser.getUserRequest().create(secondTestData.getUser());

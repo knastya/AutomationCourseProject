@@ -4,6 +4,8 @@ import api.enums.RoleId;
 import api.models.*;
 
 import static api.enums.RoleId.SYSTEM_ADMIN;
+import static api.generators.RandomData.getRandomString;
+import static api.models.Step.buildCommandLineStep;
 import static java.util.Collections.singletonList;
 
 public class TestDataGenerator {
@@ -12,32 +14,27 @@ public class TestDataGenerator {
 
     public static TestData generate() {
         var user = User.builder()
-                .username(RandomData.getString())
-                .password(RandomData.getString())
-                .email(RandomData.getString() + "@gmail.com")
-                .roles(Roles.builder()
-                        .role(singletonList(Role.builder()
-                                .roleId(SYSTEM_ADMIN)
-                                .scope("g")
-                                .build()))
-                        .build())
+                .username(getRandomString())
+                .password(getRandomString())
+                .email(getRandomString() + "@gmail.com")
+                .roles(generateRoles(SYSTEM_ADMIN, "g"))
                 .build();
         var newProjectDescription = NewProjectDescription
                 .builder()
                 .parentProject(Project.builder()
                         .locator("id:" + ROOT)
                         .build())
-                .name(RandomData.getString())
-                .id(RandomData.getString())
+                .name(getRandomString())
+                .id(getRandomString())
                 .copyAllAssociatedSettings(true)
                 .build();
-        var project = Project.builder()
-                .id(newProjectDescription.getId())
-                .build();
         var buildType = BuildType.builder()
-                .id(RandomData.getString())
-                .name(RandomData.getString())
-                .project(project)
+                .id(getRandomString())
+                .name(getRandomString())
+                .project(Project.builder()
+                        .id(newProjectDescription.getId())
+                        .build())
+                .steps(new Steps(buildCommandLineStep()))
                 .build();
         return TestData.builder()
                 .user(user)
@@ -51,6 +48,11 @@ public class TestDataGenerator {
                 .roleId(roleId)
                 .scope(scope)
                 .build();
-        return Roles.builder().role(singletonList(role)).build();
+        return new Roles(singletonList(role));
     }
+
+    public static String projectScope(String projectId) {
+        return "p:" + projectId;
+    }
+
 }

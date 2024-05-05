@@ -13,7 +13,6 @@ public class BuildType {
     private String id;
     private String name;
     private Project project;
-    private Templates templates;
-    private Properties parameters;
     private Steps steps;
+
 }
