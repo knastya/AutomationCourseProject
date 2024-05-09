@@ -1,14 +1,16 @@
 package api.generators;
 
+import api.models.ToDelete;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class TestDataStorage {
     private static TestDataStorage testDataStorage;
-    private final List<TestData> testDataList;
+    private final List<ToDelete> addedEntityList;
 
     private TestDataStorage() {
-        this.testDataList = new ArrayList<>();
+        this.addedEntityList = new ArrayList<>();
     }
 
     public static TestDataStorage getStorage() {
@@ -19,17 +21,15 @@ public class TestDataStorage {
     }
 
     public TestData addTestData() {
-        var testData = TestDataGenerator.generate();
-        addTestData(testData);
-        return testData;
+        return TestDataGenerator.generate();
     }
 
-    public TestData addTestData(TestData testData) {
-        getStorage().testDataList.add(testData);
-        return testData;
+    public void addCreatedEntity(ToDelete objectToDelete) {
+        addedEntityList.add(objectToDelete);
     }
 
     public void delete() {
-        testDataList.forEach(TestData::delete);
+        addedEntityList.forEach(ToDelete::delete);
+        addedEntityList.clear();
     }
 }

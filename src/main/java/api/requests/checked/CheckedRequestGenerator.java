@@ -42,4 +42,10 @@ public class CheckedRequestGenerator<T> extends Request implements CrudInterface
                 .then().assertThat().statusCode(SC_NO_CONTENT)
                 .extract().asString();
     }
+
+    public String deleteByUsername(String username) {
+        return new UncheckedRequestGenerator(endpoint, spec).deleteByUsername(username)
+                .then().assertThat().statusCode(SC_NO_CONTENT)
+                .extract().asString();
+    }
 }

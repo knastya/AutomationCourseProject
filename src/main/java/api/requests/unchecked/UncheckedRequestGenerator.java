@@ -1,5 +1,7 @@
 package api.requests.unchecked;
 
+import api.generators.TestDataStorage;
+import api.models.ToDelete;
 import api.requests.CrudInterface;
 import api.requests.Endpoint;
 import api.requests.Request;
@@ -7,6 +9,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpStatus.SC_OK;
 
 public class UncheckedRequestGenerator extends Request implements CrudInterface {
 
@@ -16,10 +19,18 @@ public class UncheckedRequestGenerator extends Request implements CrudInterface 
 
     @Override
     public Response create(Object obj) {
-        return given()
+        var response = given()
                 .spec(spec)
                 .body(obj)
                 .post(endpoint.getUrl());
+
+        if (response.statusCode() == SC_OK) {
+            var castedObject = response.then().extract().as(endpoint.getClazz());
+            if (castedObject instanceof ToDelete) {
+                TestDataStorage.getStorage().addCreatedEntity((ToDelete) castedObject);
+            }
+        }
+        return response;
     }
 
     @Override
@@ -45,6 +56,6 @@ public class UncheckedRequestGenerator extends Request implements CrudInterface 
     public Response deleteByUsername(String username) {
         return given()
                 .spec(spec)
-                .delete(endpoint + "/username:" + username);
+                .delete(endpoint.getUrl() + "/username:" + username);
     }
 }
