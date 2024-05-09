@@ -1,9 +1,7 @@
 package com.example.teamcity.api;
 
-import api.requests.checked.CheckedBuildConfig;
-import api.requests.checked.CheckedProject;
-import api.requests.unchecked.UncheckedBuildConfig;
-import api.requests.unchecked.UncheckedProject;
+import api.requests.checked.CheckedRequests;
+import api.requests.unchecked.UncheckedRequests;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 
@@ -24,7 +22,7 @@ public class RolesTest extends BaseApiTest {
     public void unauthorizedUserShouldNotHaveRightToCreateProject() {
         var testData = testDataStorage.addTestData();
 
-        new UncheckedProject(unAuthSpec())
+        new UncheckedRequests(unAuthSpec()).getProjectRequest()
                 .create(testData.getProject())
                 .then().assertThat().statusCode(HttpStatus.SC_UNAUTHORIZED);
                 //.body(containsString("Authentication required"));
@@ -45,7 +43,8 @@ public class RolesTest extends BaseApiTest {
 
         checkedWithSuperUser.getUserRequest().create(testData.getUser());
 
-        var project = new CheckedProject(authSpec(testData.getUser()))
+        var project = new CheckedRequests(authSpec(testData.getUser()))
+                .getProjectRequest()
                 .create(testData.getProject());
 
         softy.assertThat(project.getId()).isEqualTo(testData.getProject().getId());
@@ -63,7 +62,8 @@ public class RolesTest extends BaseApiTest {
 
         checkedWithSuperUser.getUserRequest().create(testData.getUser());
 
-        var buildConfig = new CheckedBuildConfig(authSpec(testData.getUser()))
+        var buildConfig = new CheckedRequests(authSpec(testData.getUser()))
+                .getBuildConfigRequest()
                 .create(testData.getBuildType());
 
         softy.assertThat(buildConfig.getId()).isEqualTo(testData.getBuildType().getId());
@@ -89,7 +89,8 @@ public class RolesTest extends BaseApiTest {
 
         checkedWithSuperUser.getUserRequest().create(secondTestData.getUser());
 
-        new UncheckedBuildConfig(authSpec(secondTestData.getUser()))
+        new UncheckedRequests(authSpec(secondTestData.getUser()))
+                .getBuildConfigRequest()
                 .create(firstTestData.getBuildType())
                 .then().assertThat().statusCode(SC_FORBIDDEN);
     }

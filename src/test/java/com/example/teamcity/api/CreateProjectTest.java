@@ -1,6 +1,5 @@
 package com.example.teamcity.api;
 
-
 import api.models.NewProjectDescription;
 import api.models.Project;
 import org.testng.annotations.BeforeMethod;

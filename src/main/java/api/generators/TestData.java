@@ -3,8 +3,7 @@ package api.generators;
 import api.models.BuildType;
 import api.models.NewProjectDescription;
 import api.models.User;
-import api.requests.unchecked.UncheckedProject;
-import api.requests.unchecked.UncheckedUser;
+import api.requests.unchecked.UncheckedRequests;
 import lombok.Builder;
 import lombok.Data;
 
@@ -19,7 +18,7 @@ public class TestData {
 
     public void delete() {
         var spec = superUserSpec();
-        new UncheckedProject(spec).delete(project.getId());
-        new UncheckedUser(spec).delete(user.getUsername());
+        new UncheckedRequests(spec).getProjectRequest().delete(project.getId());
+        new UncheckedRequests(spec).getUserRequest().deleteByUsername(user.getUsername());
     }
 }
