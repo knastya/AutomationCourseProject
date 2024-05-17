@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeSuite;
 
 import java.util.*;
 
+import static com.example.teamcity.api.models.Module.*;
 import static com.example.teamcity.api.spec.Specifications.superUserSpec;
 
 public class BaseTest {

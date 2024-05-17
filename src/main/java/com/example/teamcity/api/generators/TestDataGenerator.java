@@ -1,7 +1,6 @@
 package com.example.teamcity.api.generators;
 
 import com.example.teamcity.api.enums.RoleId;
-import api.models.*;
 import com.example.teamcity.api.models.BuildType;
 import com.example.teamcity.api.models.NewProjectDescription;
 import com.example.teamcity.api.models.Project;
