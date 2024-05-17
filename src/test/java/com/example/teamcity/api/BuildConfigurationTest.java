@@ -57,7 +57,7 @@ public class BuildConfigurationTest extends BaseApiTest {
         buildConfigTestData2.getProject().setId(buildConfigTestData.getProject().getId());
         buildConfigTestData2.setName(buildConfigTestData.getName());
 
-        checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
+       checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
 
         uncheckedWithSuperUser.getBuildConfigRequest()
                 .create(buildConfigTestData2)

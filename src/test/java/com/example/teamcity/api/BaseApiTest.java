@@ -11,11 +11,9 @@ import static api.spec.Specifications.superUserSpec;
 public class BaseApiTest extends BaseTest {
     public TestDataStorage testDataStorage;
 
-    public CheckedRequests checkedWithSuperUser
-            = new CheckedRequests(superUserSpec());
+    public CheckedRequests checkedWithSuperUser = new CheckedRequests(superUserSpec());
 
-    public UncheckedRequests uncheckedWithSuperUser
-            = new UncheckedRequests(superUserSpec());
+    public UncheckedRequests uncheckedWithSuperUser = new UncheckedRequests(superUserSpec());
 
     @BeforeMethod
     public void setupTest() {
