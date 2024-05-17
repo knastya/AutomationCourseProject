@@ -1,17 +1,17 @@
 package com.example.teamcity.api;
 
-import api.models.BuildType;
-import api.models.NewProjectDescription;
-import api.models.Step;
-import api.models.Steps;
+import com.example.teamcity.api.models.BuildType;
+import com.example.teamcity.api.models.NewProjectDescription;
+import com.example.teamcity.api.models.Step;
+import com.example.teamcity.api.models.Steps;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
 
-import static api.models.Step.buildCommandLineStep;
-import static api.models.Step.buildPowerShellStep;
+import static com.example.teamcity.api.models.Step.buildCommandLineStep;
+import static com.example.teamcity.api.models.Step.buildPowerShellStep;
 import static java.lang.String.format;
 import static org.apache.commons.lang3.RandomStringUtils.*;
 import static org.apache.hc.core5.http.HttpStatus.*;
