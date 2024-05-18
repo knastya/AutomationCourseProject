@@ -1,28 +1,30 @@
 package com.example.teamcity.ui;
 
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.selector.ByAttribute;
+import com.example.teamcity.ui.pages.admin.CreateNewProject;
+import com.example.teamcity.ui.pages.favorites.ProjectsPage;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.element;
+import static com.codeborne.selenide.Condition.text;
+import static com.example.teamcity.api.generators.TestDataGenerator.ROOT;
 
 public class CreateNewProjectTest extends BaseUiTest {
 
     @Test
-    public void authorizedUserShouldBeAbleCreateNewProject() {
+    public void userShouldBeAbleCreateNewProject() {
         var testData = testDataStorage.addTestData();
+        var url = "https://github.com/knastya/AutomationCourseProject";
 
-        checkedWithSuperUser.getUserRequest().create(testData.getUser());
+        loginAsUser(testData.getUser());
 
-        Selenide.open("/login.html");
+        new CreateNewProject()
+                .open(ROOT)
+                .createProjectByUrl(url)
+                .setupProject(testData.getProject().getName(), testData.getBuildType().getName());
 
-        var usernameInput = element(new ByAttribute("id", "username"));
-        var passwordInput = element(new ByAttribute("id", "password"));
-        var logInButton = element(new ByAttribute("type", "submit"));
-
-        usernameInput.sendKeys(testData.getUser().getUsername());
-        passwordInput.sendKeys(testData.getUser().getPassword());
-
-        logInButton.click();
+        new ProjectsPage().open()
+                .getSubprojects()
+                .stream().reduce((first, second) -> second).get()
+                .getHeader().shouldHave(text(testData.getProject().getName()));
     }
+
 }
