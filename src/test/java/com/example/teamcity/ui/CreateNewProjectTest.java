@@ -23,7 +23,26 @@ public class CreateNewProjectTest extends BaseUiTest {
 
         new ProjectsPage().open()
                 .getSubprojects()
-                .stream().reduce((first, second) -> second).get()
+                .stream().reduce((first, second) -> second)
+                .orElseThrow(() -> new AssertionError("Element wasn't found"))
+                .getHeader().shouldHave(text(testData.getProject().getName()));
+    }
+
+    @Test
+    public void userShouldBeAbleCreateNewProjectWithManualOption() {
+        var testData = testDataStorage.addTestData();
+
+        loginAsUser(testData.getUser());
+
+        new CreateNewProject()
+                .open(ROOT)
+                .clickOnManuallyOption()
+                .createProjectManually(testData.getProject().getName());
+
+        new ProjectsPage().open()
+                .getSubprojects()
+                .stream().reduce((first, second) -> second)
+                .orElseThrow(() -> new AssertionError("Element wasn't found"))
                 .getHeader().shouldHave(text(testData.getProject().getName()));
     }
 

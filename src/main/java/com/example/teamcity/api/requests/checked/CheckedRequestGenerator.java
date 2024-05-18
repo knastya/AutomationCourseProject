@@ -23,8 +23,8 @@ public class CheckedRequestGenerator<T> extends Request implements CrudInterface
     }
 
     @Override
-    public Object get(String id) {
-        return new UncheckedRequestGenerator(endpoint, spec).get(id)
+    public T get(String id) {
+        return (T) new UncheckedRequestGenerator(endpoint, spec).get(id)
                 .then().assertThat().statusCode(SC_OK)
                 .extract().as(endpoint.getClazz());
     }
