@@ -1,11 +1,12 @@
 package com.example.teamcity.api.models;
 
 import com.example.teamcity.api.requests.unchecked.UncheckedRequests;
-import com.example.teamcity.api.spec.Specifications;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import static com.example.teamcity.api.spec.Specifications.superUserSpec;
 
 @Builder
 @Data
@@ -19,6 +20,6 @@ public class User implements ToDelete {
 
     @Override
     public void delete() {
-        new UncheckedRequests(Specifications.superUserSpec()).getUserRequest().deleteByUsername(username);
+        new UncheckedRequests(superUserSpec()).getUserRequest().deleteByUsername(username);
     }
 }

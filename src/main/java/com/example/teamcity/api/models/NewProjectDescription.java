@@ -1,14 +1,15 @@
 package com.example.teamcity.api.models;
 
 import com.example.teamcity.api.requests.unchecked.UncheckedRequests;
-import com.example.teamcity.api.generators.TestDataGenerator;
-import com.example.teamcity.api.spec.Specifications;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Objects;
+
+import static com.example.teamcity.api.generators.TestDataGenerator.ROOT;
+import static com.example.teamcity.api.spec.Specifications.superUserSpec;
 
 @Builder
 @Data
@@ -23,8 +24,8 @@ public class NewProjectDescription implements ToDelete {
 
     @Override
     public void delete() {
-        if (Objects.equals(parentProjectId, TestDataGenerator.ROOT)) {
-            new UncheckedRequests(Specifications.superUserSpec()).getProjectRequest().delete(id);
+        if (Objects.equals(parentProjectId, ROOT)) {
+            new UncheckedRequests(superUserSpec()).getProjectRequest().delete(id);
         }
     }
 }

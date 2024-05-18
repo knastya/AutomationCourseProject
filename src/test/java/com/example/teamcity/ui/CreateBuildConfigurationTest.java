@@ -36,7 +36,7 @@ public class CreateBuildConfigurationTest extends BaseUiTest {
     }
 
     @Test
-    public void userShouldBeAbleCreateBuildConfigManually() {
+    public void userShouldBeAbleCreateBuildConfigWithManualOption() {
         var testData = testDataStorage.addTestData();
         var url = "https://github.com/knastya/AutomationCourseProject";
         String buildName = testData.getBuildType().getName();

@@ -1,8 +1,9 @@
 package com.example.teamcity.api.requests.unchecked;
 
-import com.example.teamcity.api.requests.Endpoint;
 import io.restassured.specification.RequestSpecification;
 import lombok.Getter;
+
+import static com.example.teamcity.api.requests.Endpoint.*;
 
 @Getter
 public class UncheckedRequests {
@@ -11,8 +12,8 @@ public class UncheckedRequests {
     private final UncheckedRequestGenerator buildConfigRequest;
 
     public UncheckedRequests(RequestSpecification spec) {
-        this.userRequest = new UncheckedRequestGenerator(Endpoint.USER, spec);
-        this.buildConfigRequest = new UncheckedRequestGenerator(Endpoint.BUILD_CONFIG, spec);
-        this.projectRequest = new UncheckedRequestGenerator(Endpoint.PROJECT, spec);
+        this.userRequest = new UncheckedRequestGenerator(USER, spec);
+        this.buildConfigRequest = new UncheckedRequestGenerator(BUILD_CONFIG, spec);
+        this.projectRequest = new UncheckedRequestGenerator(PROJECT, spec);
    }
 }

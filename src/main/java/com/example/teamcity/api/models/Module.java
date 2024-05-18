@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import static com.example.teamcity.api.models.Properties.defaultProperties;
+import static com.example.teamcity.api.models.Properties.ldapProperties;
+
 @Builder
 @Data
 @AllArgsConstructor
@@ -16,7 +19,7 @@ public class Module {
     public static Module defaultModule() {
         return Module.builder()
                 .name("Default")
-                .properties(Properties.defaultProperties())
+                .properties(defaultProperties())
                 .build();
     }
 
@@ -27,7 +30,7 @@ public class Module {
     public static Module ldapModule() {
         return Module.builder()
                 .name("LDAP")
-                .properties(Properties.ldapProperties())
+                .properties(ldapProperties())
                 .build();
     }
 

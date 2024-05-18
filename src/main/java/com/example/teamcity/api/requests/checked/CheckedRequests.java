@@ -3,9 +3,10 @@ package com.example.teamcity.api.requests.checked;
 import com.example.teamcity.api.models.BuildType;
 import com.example.teamcity.api.models.NewProjectDescription;
 import com.example.teamcity.api.models.User;
-import com.example.teamcity.api.requests.Endpoint;
 import io.restassured.specification.RequestSpecification;
 import lombok.Getter;
+
+import static com.example.teamcity.api.requests.Endpoint.*;
 
 @Getter
 public class CheckedRequests {
@@ -14,8 +15,8 @@ public class CheckedRequests {
     private final CheckedRequestGenerator<BuildType> buildConfigRequest;
 
     public CheckedRequests(RequestSpecification spec) {
-        this.userRequest = new CheckedRequestGenerator<>(Endpoint.USER, spec);
-        this.buildConfigRequest = new CheckedRequestGenerator<>(Endpoint.BUILD_CONFIG, spec);
-        this.projectRequest = new CheckedRequestGenerator<>(Endpoint.PROJECT, spec);
+        this.userRequest = new CheckedRequestGenerator<>(USER, spec);
+        this.buildConfigRequest = new CheckedRequestGenerator<>(BUILD_CONFIG, spec);
+        this.projectRequest = new CheckedRequestGenerator<>(PROJECT, spec);
     }
 }

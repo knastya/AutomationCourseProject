@@ -1,12 +1,10 @@
 package com.example.teamcity.ui.pages.admin;
 
 import com.codeborne.selenide.SelenideElement;
-import lombok.Getter;
 
 import static com.codeborne.selenide.Selenide.element;
 import static com.example.teamcity.ui.Selectors.byId;
 
-@Getter
 public class CreateNewProject extends CreateNewEntityPage<CreateNewProject> {
     private final SelenideElement projectNameInput = element(byId("projectName"));
     private final SelenideElement buildTypeNameInput = element(byId("buildTypeName"));
