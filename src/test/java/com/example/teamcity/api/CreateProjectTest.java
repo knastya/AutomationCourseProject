@@ -1,12 +1,12 @@
 package com.example.teamcity.api;
 
-import api.models.NewProjectDescription;
-import api.models.Project;
+import com.example.teamcity.api.models.NewProjectDescription;
+import com.example.teamcity.api.models.Project;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
 
-import static api.generators.TestDataGenerator.ROOT;
+import static com.example.teamcity.api.generators.TestDataGenerator.ROOT;
 import static java.lang.String.format;
 import static org.apache.commons.lang3.RandomStringUtils.*;
 import static org.apache.hc.core5.http.HttpStatus.*;

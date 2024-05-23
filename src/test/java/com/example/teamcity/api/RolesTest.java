@@ -1,16 +1,16 @@
 package com.example.teamcity.api;
 
-import api.requests.checked.CheckedRequests;
-import api.requests.unchecked.UncheckedRequests;
+import com.example.teamcity.api.requests.checked.CheckedRequests;
+import com.example.teamcity.api.requests.unchecked.UncheckedRequests;
 import org.apache.http.HttpStatus;
 import org.testng.annotations.Test;
 
-import static api.enums.RoleId.PROJECT_ADMIN;
-import static api.enums.RoleId.SYSTEM_ADMIN;
-import static api.generators.TestDataGenerator.generateRoles;
-import static api.generators.TestDataGenerator.projectScope;
-import static api.spec.Specifications.authSpec;
-import static api.spec.Specifications.unAuthSpec;
+import static com.example.teamcity.api.enums.RoleId.PROJECT_ADMIN;
+import static com.example.teamcity.api.enums.RoleId.SYSTEM_ADMIN;
+import static com.example.teamcity.api.generators.TestDataGenerator.generateRoles;
+import static com.example.teamcity.api.generators.TestDataGenerator.projectScope;
+import static com.example.teamcity.api.spec.Specifications.authSpec;
+import static com.example.teamcity.api.spec.Specifications.unAuthSpec;
 import static java.lang.String.format;
 import static org.apache.hc.core5.http.HttpStatus.SC_FORBIDDEN;
 import static org.apache.hc.core5.http.HttpStatus.SC_NOT_FOUND;
