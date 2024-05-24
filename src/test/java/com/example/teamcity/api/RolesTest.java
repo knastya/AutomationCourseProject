@@ -1,22 +1,38 @@
 package com.example.teamcity.api;
 
+import com.example.teamcity.api.models.AuthSettings;
+import com.example.teamcity.api.models.Modules;
+import com.example.teamcity.api.requests.checked.CheckedAuthSettings;
 import com.example.teamcity.api.requests.checked.CheckedRequests;
 import com.example.teamcity.api.requests.unchecked.UncheckedRequests;
 import org.apache.http.HttpStatus;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 import static com.example.teamcity.api.enums.RoleId.PROJECT_ADMIN;
 import static com.example.teamcity.api.enums.RoleId.SYSTEM_ADMIN;
 import static com.example.teamcity.api.generators.TestDataGenerator.generateRoles;
 import static com.example.teamcity.api.generators.TestDataGenerator.projectScope;
-import static com.example.teamcity.api.spec.Specifications.authSpec;
-import static com.example.teamcity.api.spec.Specifications.unAuthSpec;
+import static com.example.teamcity.api.models.Module.*;
+import static com.example.teamcity.api.spec.Specifications.*;
 import static java.lang.String.format;
 import static org.apache.hc.core5.http.HttpStatus.SC_FORBIDDEN;
 import static org.apache.hc.core5.http.HttpStatus.SC_NOT_FOUND;
 import static org.hamcrest.Matchers.containsString;
 
 public class RolesTest extends BaseApiTest {
+
+    @BeforeClass
+    public void setup() {
+        Modules modules = Modules.builder()
+                .module(Arrays.asList(
+                        httpBasic(), defaultModule(), tokenAuthModule(), ldapModule()
+                )).build();
+        AuthSettings authSettings = new AuthSettings(true, modules);
+        new CheckedAuthSettings(superUserSpec()).update(authSettings);
+    }
 
     @Test
     public void unauthorizedUserShouldNotHaveRightToCreateProject() {
