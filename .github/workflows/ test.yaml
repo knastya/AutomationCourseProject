@@ -26,9 +26,6 @@ jobs:
       - name: Set up host config property
         run: echo "host=$HOST:8111" > src/main/resources/config.properties
 
-      - name: print
-        run: hostname -I
-
       - name: Set up remote config property
         run: echo "remote=http://$HOST:4444/wd/hub" >> src/main/resources/config.properties
 
@@ -77,7 +74,7 @@ jobs:
         # Настройка сервера при первом запуске (принятие лицензии, выбор базы данных и т.д.), реализованная в виде теста
         run: |
           set -o pipefail
-         ./mvnw clean test -Dtest=SetupTest#startUpTest --no-transfer-progress
+          ./mvnw clean test -Dtest=SetupTest#startUpTest --no-transfer-progress
 
       - name: Set up superUserToken environment variable
         # Берем из лога контейнера строку с последним упоминанием токена, из нее 6-е слово, что соответствует токену
@@ -88,5 +85,5 @@ jobs:
       - name: Run tests
         # Указываем группу, чтобы еще раз не запустить тесты, которые использовались для сетапа сервера и агента
         run: |
-         set -o pipefail
-         ./mvnw test -Dsmoke=teamcity-suites/api-suite.xml --no-transfer-progress
+          set -o pipefail
+          ./mvnw test -Dsmoke=teamcity-suites/api-suite.xml --no-transfer-progress
