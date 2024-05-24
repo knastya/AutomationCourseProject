@@ -20,11 +20,13 @@ jobs:
       - name: Set up host environment variable
         # Команда для определения ip адреса для обращения из другого контейнера, рекомендуется в документации Selenoid UI: https://aerokube.com/selenoid-ui/latest/
         run: |
-          echo "HOST=$(ifconfig | grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}" | grep -v 127.0.0.1 | awk '{ print $2 }' | cut -f2 -d: | head -n1)" >> $GITHUB_ENV
+          echo "HOST=$(ifconfig | grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}" | grep -v 127.0.0.1 | awk '{ print $2 }' | cut -f2 -d: | head -n1)" >> "$GITHUB_ENV"
+
+      # Храним переменные как в переменных среды ($GITHUB_ENV), для использования внутри этого yml файла, так и в config.properties, для использования в тестах
+      - name: Set up host config property
+        run: | 
+          printf '%s\n' "$HOST" # This will be host
           echo "host=$HOST:8111" >> src/main/resources/config.properties
-#      # Храним переменные как в переменных среды ($GITHUB_ENV), для использования внутри этого yml файла, так и в config.properties, для использования в тестах
-#      - name: Set up host config property
-#        run: echo "host=$HOST:8111" >> src/main/resources/config.properties
 
       - name: Set up remote config property
         run: echo "remote=http://$HOST:4444/wd/hub" >> src/main/resources/config.properties
@@ -63,7 +65,7 @@ jobs:
 
       - name: Set up TeamCity server
         # Настройка сервера при первом запуске (принятие лицензии, выбор базы данных и т.д.), реализованная в виде теста
-        run: ./mvnw clean test -Dtest=SetupTest#startUpTest
+        run: ./mvnw clean test -Dtest=SetupTest#startUpTest --no-transfer-progress
 
       - name: Set up superUserToken environment variable
         # Берем из лога контейнера строку с последним упоминанием токена, из нее 6-е слово, что соответствует токену
@@ -73,4 +75,4 @@ jobs:
 
       - name: Run tests
         # Указываем группу, чтобы еще раз не запустить тесты, которые использовались для сетапа сервера и агента
-        run: ./mvnw test -DsuiteXmlFile=teamcity-suites/api-suite.xml
+        run: ./mvnw test -DsuiteXmlFile=teamcity-suites/api-suite.xml --no-transfer-progress
