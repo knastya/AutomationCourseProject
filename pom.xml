@@ -109,8 +109,7 @@
                         </property>
                     </systemProperties>
                     <suiteXmlFiles>
-                        <suiteXmlFile>teamcity-suites/api-suite.xml</suiteXmlFile>
-                        <suiteXmlFile>teamcity-suites/ui-suite.xml</suiteXmlFile>
+                        <suiteXmlFile>${smoke}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
                 <dependencies>
