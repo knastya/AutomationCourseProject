@@ -61,8 +61,8 @@ jobs:
           -p 8111:8111 \
           jetbrains/teamcity-server:2023.11.1
 
-      - name: Sleep for 2 minutes
-        run: sleep 120s
+      - name: Sleep for 1 minute
+        run: sleep 60s
 
       - name: logs
         uses: jwalton/gh-docker-logs@v2
