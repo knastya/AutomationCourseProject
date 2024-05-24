@@ -2,6 +2,7 @@ package com.example.teamcity.ui.pages;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.visible;
@@ -17,6 +18,7 @@ public class StartupPage extends Page {
     private final SelenideElement acceptCheckbox = element(byId("accept"));
     private final SelenideElement continueButton = element(byName("Continue"));
 
+    @Step("Open initial step")
     public StartupPage open() {
         Selenide.open("/");
         return this;

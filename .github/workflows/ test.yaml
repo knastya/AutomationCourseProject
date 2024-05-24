@@ -26,6 +26,9 @@ jobs:
       - name: Set up host config property
         run: echo "host=$HOST:8111" >> src/main/resources/config.properties
 
+      - name: print
+        run: hostname -I
+
       - name: Set up remote config property
         run: echo "remote=http://$HOST:4444/wd/hub" >> src/main/resources/config.properties
 
@@ -58,8 +61,8 @@ jobs:
           -p 8111:8111 \
           jetbrains/teamcity-server:2023.11.1
 
-      - name: Sleep for 3 minutes
-        run: sleep 180s
+      - name: Sleep for 2 minutes
+        run: sleep 120s
 
       - name: logs
         uses: jwalton/gh-docker-logs@v2
