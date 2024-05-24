@@ -12,8 +12,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu'
-      - name: logs
-        uses: jwalton/gh-docker-logs@v2
 
       # По умолчанию в ubuntu отсутствует команда ifconfig
       - name: Install ifconfig
@@ -59,6 +57,9 @@ jobs:
           -v $(pwd)/tmp/teamcity_server/logs:/opt/teamcity/logs \
           -p 8111:8111 \
           jetbrains/teamcity-server:2023.11.1
+
+      - name: logs
+        uses: jwalton/gh-docker-logs@v2
 
       - name: Give rights
         run: chmod +x mvnw
