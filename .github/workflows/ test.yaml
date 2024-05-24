@@ -12,6 +12,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'zulu'
+      - name: logs
+        uses: jwalton/gh-docker-logs@v2
 
       # По умолчанию в ubuntu отсутствует команда ifconfig
       - name: Install ifconfig
@@ -36,7 +38,6 @@ jobs:
         run: docker pull selenoid/vnc:firefox_89.0
 
       - name: Run Selenoid
-        uses: jwalton/gh-docker-logs@v2
         # Флаг -d запускает контейнер в фоновом режиме (так как, например, контейнер с сервером не имеет окончания, он просто всегда включен,
         # и если мы без этого флага в него перейдем, то никогда не сможем перешагнуть к следующему степу
         run: |
