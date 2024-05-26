@@ -19,6 +19,7 @@ public class ProjectsPage  extends FavoritesPage {
     public ProjectsPage open() {
         Selenide.open(FAVORITE_PROJECTS_URL);
         waitUntilFavoritePageIsLoaded();
+        waitUntilLoadingIsAbsent();
         return this;
     }
 
