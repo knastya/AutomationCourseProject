@@ -61,7 +61,7 @@ jobs:
       - name: Sleep for 1 minute
         run: sleep 60s
 
-      - name: logs
+      - name: Get containers logs
         uses: jwalton/gh-docker-logs@v2
 
       - name: Give rights
@@ -79,8 +79,12 @@ jobs:
       - name: Set up superUserToken environment variable
         # Берем из лога контейнера строку с последним упоминанием токена, из нее 6-е слово, что соответствует токену
         run: echo "SUPER_USER_TOKEN=$(docker logs teamcity-server | grep 'Super user authentication token' | tail -n 1 | awk '{print $6}')" >> $GITHUB_ENV
+
       - name: Set up superUserToken config property
         run: echo "superUserToken=$SUPER_USER_TOKEN" >> src/main/resources/config.properties
+
+      - name: Verify config.properties
+        run: cat src/main/resources/config.properties
 
       - name: Run tests
         # Указываем группу, чтобы еще раз не запустить тесты, которые использовались для сетапа сервера и агента
