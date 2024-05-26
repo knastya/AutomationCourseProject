@@ -84,9 +84,13 @@ jobs:
       - name: Verify config.properties
         run: cat src/main/resources/config.properties
 
-      - name: Run API tests
-        # Указываем группу, чтобы еще раз не запустить тесты, которые использовались для сетапа сервера и агента
-        run: ./mvnw test -Dmaven.test.failure.ignore=false -DsuiteXmlFile=teamcity-suites/api-suite.xml
+      - name: Run API tests # Тут разделение не работает, запускается всё
+        run: |
+          set +e
+          ./mvnw test -DsuiteXmlFile=teamcity-suites/api-suite.xml
+          exitcode="$?"
+          echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
+          exit "$exitcode"
 
-      - name: Run UI tests
+      - name: Run UI tests # Тут разделение не работает, запускается всё
         run: ./mvnw test -DsuiteXmlFile=teamcity-suites/ui-suite.xml
