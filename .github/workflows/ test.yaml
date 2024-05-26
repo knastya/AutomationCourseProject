@@ -86,7 +86,7 @@ jobs:
 
       - name: Run API tests
         # Указываем группу, чтобы еще раз не запустить тесты, которые использовались для сетапа сервера и агента
-        run: ./mvnw test -DsuiteXmlFile=teamcity-suites/api-suite.xml
+        run: ./mvnw test -Dmaven.test.failure.ignore=false -DsuiteXmlFile=teamcity-suites/api-suite.xml
 
       - name: Run UI tests
         run: ./mvnw test -DsuiteXmlFile=teamcity-suites/ui-suite.xml
