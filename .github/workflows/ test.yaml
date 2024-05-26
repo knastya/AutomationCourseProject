@@ -86,9 +86,7 @@ jobs:
 
       - name: Run API tests
         # Указываем группу, чтобы еще раз не запустить тесты, которые использовались для сетапа сервера и агента
-        run: |
-          ./mvnw clean test -Dgroups=API_regression --no-transfer-progress
+        run: ./mvnw test -DsuiteXmlFile=teamcity-suites/api-suite.xml
 
       - name: Run UI tests
-        run: |
-          ./mvnw test -Dgroups=UI_regression --no-transfer-progress
+        run: ./mvnw test -DsuiteXmlFile=teamcity-suites/ui-suite.xml
