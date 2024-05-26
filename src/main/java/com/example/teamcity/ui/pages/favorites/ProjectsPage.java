@@ -7,8 +7,11 @@ import io.qameta.allure.Step;
 
 import java.util.List;
 
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThanOrEqual;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.elements;
+import static java.time.Duration.ofSeconds;
 
 public class ProjectsPage  extends FavoritesPage {
     private static final String FAVORITE_PROJECTS_URL = "/favorite/projects";
@@ -19,11 +22,11 @@ public class ProjectsPage  extends FavoritesPage {
     public ProjectsPage open() {
         Selenide.open(FAVORITE_PROJECTS_URL);
         waitUntilFavoritePageIsLoaded();
-        waitUntilLoadingIsAbsent();
         return this;
     }
 
     public List<ProjectElement> getSubprojects() {
+        subprojects.filterBy(visible).shouldHave(sizeGreaterThanOrEqual(1), ofSeconds(10));
         return generatePageElements(subprojects, ProjectElement::new);
     }
 }
