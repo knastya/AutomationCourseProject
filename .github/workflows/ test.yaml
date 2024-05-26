@@ -89,5 +89,5 @@ jobs:
       - name: Run tests
         # Указываем группу, чтобы еще раз не запустить тесты, которые использовались для сетапа сервера и агента
         run: |
-          ./mvnw test -DxmlFilePath=teamcity-suites/api-suite.xml --no-transfer-progress
+          ./mvnw test -DsuiteXmlFile=teamcity-suites/api-suite.xml --no-transfer-progress
           set -o pipefail
