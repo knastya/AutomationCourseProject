@@ -16,7 +16,7 @@ public class CreateProjectTest extends BaseApiTest {
 
     private NewProjectDescription projectTestData;
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"API_regression"})
     public void before() {
         projectTestData = testDataStorage.addTestData().getProject();
     }

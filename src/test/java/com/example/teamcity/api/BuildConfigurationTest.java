@@ -22,7 +22,7 @@ public class BuildConfigurationTest extends BaseApiTest {
     private BuildType buildConfigTestData;
     private NewProjectDescription projectTestData;
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"API_regression"})
     public void before() {
         var testData = testDataStorage.addTestData();
         buildConfigTestData = testData.getBuildType();

@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <groups>
+        <run>
+            <include name="API_regression"/>
+            <include name="UI_regression"/>
+        </run>
+    </groups>
+</suite>

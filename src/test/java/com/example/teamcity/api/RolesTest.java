@@ -24,7 +24,7 @@ import static org.hamcrest.Matchers.containsString;
 
 public class RolesTest extends BaseApiTest {
 
-    @BeforeClass
+    @BeforeClass(groups = {"API_regression"})
     public void setup() {
         Modules modules = Modules.builder()
                 .module(Arrays.asList(

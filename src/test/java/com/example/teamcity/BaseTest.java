@@ -17,13 +17,13 @@ public class BaseTest {
 
     public UncheckedRequests uncheckedWithSuperUser = new UncheckedRequests(superUserSpec());
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"API_regression", "UI_regression"})
     public void beforeTest() {
         softy = new SoftAssertions();
         testDataStorage = TestDataStorage.getStorage();
     }
 
-    @AfterMethod
+    @AfterMethod(groups = {"API_regression", "UI_regression"})
     public void afterTest() {
         softy.assertAll();
         testDataStorage.delete();

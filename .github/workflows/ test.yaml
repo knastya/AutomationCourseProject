@@ -87,13 +87,8 @@ jobs:
       - name: Run API tests
         # Указываем группу, чтобы еще раз не запустить тесты, которые использовались для сетапа сервера и агента
         run: |
-          ./mvnw test -Dgroups=API_regression --no-transfer-progress
-
-      - name: Report TestNG Results
-        if: failure()
-        run: echo "Tests failed. Check the TestNG results for details."
+          ./mvnw clean test -Dgroups=API_regression --no-transfer-progress
 
       - name: Run UI tests
         run: |
           ./mvnw test -Dgroups=UI_regression --no-transfer-progress
-          set -o pipefail
