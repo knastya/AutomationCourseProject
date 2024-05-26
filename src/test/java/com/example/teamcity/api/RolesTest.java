@@ -82,7 +82,7 @@ public class RolesTest extends BaseApiTest {
                 .getBuildConfigRequest()
                 .create(testData.getBuildType());
 
-        softy.assertThat(buildConfig.getId()).isNotEqualTo(testData.getBuildType().getId());
+        softy.assertThat(buildConfig.getId()).isEqualTo(testData.getBuildType().getId());
     }
 
     @Test

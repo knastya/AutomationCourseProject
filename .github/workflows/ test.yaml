@@ -83,9 +83,9 @@ jobs:
       - name: Verify config.properties
         run: cat src/main/resources/config.properties
 
-      - name: Run API tests # Тут разделение не работает, запускается всё
+      - name: Run API tests
         run: ./mvnw test -DsuiteXmlFile=teamcity-suites/api-suite.xml --no-transfer-progress
 
-      - name: Run UI tests # Тут разделение не работает, запускается всё
+      - name: Run UI tests
         if: always()
         run: ./mvnw test -DsuiteXmlFile=teamcity-suites/ui-suite.xml --no-transfer-progress
