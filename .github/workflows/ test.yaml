@@ -73,8 +73,8 @@ jobs:
       - name: Set up TeamCity server
         # Настройка сервера при первом запуске (принятие лицензии, выбор базы данных и т.д.), реализованная в виде теста
         run: |
-          set -o pipefail &&
           ./mvnw clean test -Dtest=SetupTest#startUpTest --no-transfer-progress
+          set -o pipefail
 
       - name: Set up superUserToken environment variable
         # Берем из лога контейнера строку с последним упоминанием токена, из нее 6-е слово, что соответствует токену
@@ -89,5 +89,5 @@ jobs:
       - name: Run tests
         # Указываем группу, чтобы еще раз не запустить тесты, которые использовались для сетапа сервера и агента
         run: |
-          set -o pipefail &&
           ./mvnw test -DxmlFilePath=teamcity-suites/api-suite.xml --no-transfer-progress
+          set -o pipefail
