@@ -44,20 +44,20 @@ public class BuildConfigurationTest extends BaseApiTest {
         };
     }
 
-    @Test(dataProvider = "correctNamesProvider")
+    @Test(dataProvider = "correctNamesProvider", groups = {"API_regression"})
     public void createBuildConfigRequestWithCorrectNameShouldPass(String nameToCheck) {
         buildConfigTestData.setName(nameToCheck);
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
         softy.assertThat(buildConfig.getName()).isEqualTo(nameToCheck);
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createBuildConfigRequestWithExistedNameInSameProjectShouldFail() {
         var buildConfigTestData2 = testDataStorage.addTestData().getBuildType();
         buildConfigTestData2.getProject().setId(buildConfigTestData.getProject().getId());
         buildConfigTestData2.setName(buildConfigTestData.getName());
 
-       checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
+        checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
 
         uncheckedWithSuperUser.getBuildConfigRequest()
                 .create(buildConfigTestData2)
@@ -68,7 +68,7 @@ public class BuildConfigurationTest extends BaseApiTest {
                 )));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createBuildConfigRequestWithExistedNameInOtherProjectShouldPass() {
         checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
 
@@ -85,7 +85,7 @@ public class BuildConfigurationTest extends BaseApiTest {
         softy.assertThat(buildConfig.getName()).isEqualTo(buildConfigTestData.getName());
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createBuildConfigRequestWithoutNameShouldFail() {
         buildConfigTestData.setName(null);
         uncheckedWithSuperUser.getBuildConfigRequest()
@@ -106,7 +106,7 @@ public class BuildConfigurationTest extends BaseApiTest {
         };
     }
 
-    @Test(dataProvider = "correctIdsProvider")
+    @Test(dataProvider = "correctIdsProvider", groups = {"API_regression"})
     public void createBuildConfigRequestWithCorrectIdShouldPass(String idToCheck) {
         buildConfigTestData.setId(idToCheck);
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
@@ -125,7 +125,7 @@ public class BuildConfigurationTest extends BaseApiTest {
         };
     }
 
-    @Test(dataProvider = "incorrectIdsProvider")
+    @Test(dataProvider = "incorrectIdsProvider", groups = {"API_regression"})
     public void createBuildConfigRequestWithIncorrectIdShouldFail(String idToCheck) {
         buildConfigTestData.setId(idToCheck);
         uncheckedWithSuperUser.getBuildConfigRequest()
@@ -137,7 +137,7 @@ public class BuildConfigurationTest extends BaseApiTest {
                 ));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createBuildConfigRequestWithExistedIdInSameProjectShouldFail() {
         var buildConfigTestData2 = testDataStorage.addTestData().getBuildType();
         buildConfigTestData2.getProject().setId(buildConfigTestData.getProject().getId());
@@ -154,7 +154,7 @@ public class BuildConfigurationTest extends BaseApiTest {
                 )));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createBuildConfigRequestWithExistedIdInDifferentProjectShouldFail() {
         var testData2 = testDataStorage.addTestData();
         var projectTestData2 = testData2.getProject();
@@ -176,14 +176,14 @@ public class BuildConfigurationTest extends BaseApiTest {
                 )));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createBuildConfigRequestWithoutIdShouldPass() {
         buildConfigTestData.setId(null);
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
         softy.assertThat(buildConfig.getId()).isNotEmpty();
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createBuildConfigRequestWithNonExistedProjectShouldFail() {
         var id = "notExisted";
         buildConfigTestData.getProject().setId(id);
@@ -199,7 +199,7 @@ public class BuildConfigurationTest extends BaseApiTest {
                 ));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createBuildConfigRequestWithoutStepsShouldPass() {
         buildConfigTestData.setSteps(null);
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
@@ -208,7 +208,7 @@ public class BuildConfigurationTest extends BaseApiTest {
     }
 
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createBuildConfigRequestWithCommandLineStepsShouldPass() {
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
 
@@ -216,7 +216,7 @@ public class BuildConfigurationTest extends BaseApiTest {
         checkStep(buildConfig.getSteps().getStep().get(0), buildConfigTestData.getSteps().getStep().get(0));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createBuildConfigRequestWithPowerShellStepsShouldPass() {
         buildConfigTestData.setSteps(new Steps(buildPowerShellStep()));
         var buildConfig = checkedWithSuperUser.getBuildConfigRequest().create(buildConfigTestData);
@@ -225,7 +225,7 @@ public class BuildConfigurationTest extends BaseApiTest {
         checkStep(buildConfig.getSteps().getStep().get(0), buildConfigTestData.getSteps().getStep().get(0));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createBuildConfigRequestWithTwoStepsShouldPass() {
         var steps = Steps.builder()
                 .step(Arrays.asList(buildCommandLineStep(), buildPowerShellStep()))

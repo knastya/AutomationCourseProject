@@ -34,7 +34,7 @@ public class RolesTest extends BaseApiTest {
         new CheckedAuthSettings(superUserSpec()).update(authSettings);
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void unauthorizedUserShouldNotHaveRightToCreateProject() {
         var testData = testDataStorage.addTestData();
 
@@ -51,7 +51,7 @@ public class RolesTest extends BaseApiTest {
                 ));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void systemAdminShouldHaveRightsToCreateProject() {
         var testData = testDataStorage.addTestData();
 
@@ -66,7 +66,7 @@ public class RolesTest extends BaseApiTest {
         softy.assertThat(project.getId()).isEqualTo(testData.getProject().getId());
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void projectAdminShouldHaveRightsToCreateBuildConfigToHisProject() {
         var testData = testDataStorage.addTestData();
 
@@ -85,7 +85,7 @@ public class RolesTest extends BaseApiTest {
         softy.assertThat(buildConfig.getId()).isNotEqualTo(testData.getBuildType().getId());
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void projectAdminShouldNotHaveRightsToCreateBuildConfigToAnotherProject() {
         var firstTestData = testDataStorage.addTestData();
         var secondTestData = testDataStorage.addTestData();

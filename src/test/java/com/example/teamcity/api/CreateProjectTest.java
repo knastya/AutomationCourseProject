@@ -34,14 +34,14 @@ public class CreateProjectTest extends BaseApiTest {
         };
     }
 
-    @Test(dataProvider = "correctNamesProvider")
+    @Test(dataProvider = "correctNamesProvider", groups = {"API_regression"})
     public void createProjectRequestWithCorrectNameShouldPass(String nameToCheck) {
         projectTestData.setName(nameToCheck);
         var project = checkedWithSuperUser.getProjectRequest().create(projectTestData);
         softy.assertThat(project.getName()).isEqualTo(nameToCheck);
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createProjectRequestWithEmptyNameShouldFail() {
         projectTestData.setName(" ");
         uncheckedWithSuperUser.getProjectRequest()
@@ -50,7 +50,7 @@ public class CreateProjectTest extends BaseApiTest {
                 .body(containsString("InvalidNameException: Given project name is empty"));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createProjectRequestWithExistedNameShouldFail() {
         var projectTestData2 = testDataStorage.addTestData().getProject();
         projectTestData2.setName(projectTestData.getName());
@@ -66,7 +66,7 @@ public class CreateProjectTest extends BaseApiTest {
                 )));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createProjectRequestWithoutNameShouldFail() {
         projectTestData.setName(null);
         uncheckedWithSuperUser.getProjectRequest()
@@ -85,7 +85,7 @@ public class CreateProjectTest extends BaseApiTest {
         };
     }
 
-    @Test(dataProvider = "correctIdsProvider")
+    @Test(dataProvider = "correctIdsProvider", groups = {"API_regression"})
     public void createProjectRequestWithCorrectIdShouldPass(String idToCheck) {
         projectTestData.setId(idToCheck);
         var project = checkedWithSuperUser.getProjectRequest().create(projectTestData);
@@ -104,7 +104,7 @@ public class CreateProjectTest extends BaseApiTest {
         };
     }
 
-    @Test(dataProvider = "incorrectIdsProvider")
+    @Test(dataProvider = "incorrectIdsProvider", groups = {"API_regression"})
     public void createProjectRequestWithIncorrectIdShouldFail(String idToCheck) {
         projectTestData.setId(idToCheck);
         uncheckedWithSuperUser.getProjectRequest()
@@ -116,7 +116,7 @@ public class CreateProjectTest extends BaseApiTest {
                 ));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createProjectRequestWithExistedIdShouldFail() {
         var projectTestData2 = testDataStorage.addTestData().getProject();
         projectTestData2.setId(projectTestData.getId());
@@ -132,14 +132,14 @@ public class CreateProjectTest extends BaseApiTest {
                 )));
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createProjectRequestWithoutIdShouldPass() {
         projectTestData.setId(null);
         var project = checkedWithSuperUser.getProjectRequest().create(projectTestData);
         softy.assertThat(project.getId()).isNotEmpty();
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createProjectRequestWithCopyAllAssociatedSettingsFieldFalseShouldPass() {
         projectTestData.setCopyAllAssociatedSettings(false);
         uncheckedWithSuperUser.getProjectRequest()
@@ -147,14 +147,14 @@ public class CreateProjectTest extends BaseApiTest {
                 .then().assertThat().statusCode(SC_SUCCESS);
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createProjectRequestWithRootProjectParentIdInLocatorShouldPass() {
         var project = checkedWithSuperUser.getProjectRequest().create(projectTestData);
         softy.assertThat(project.getParentProjectId()).isEqualTo(ROOT);
         softy.assertThat(project.getParentProject().getId()).isEqualTo(ROOT);
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createProjectRequestWithOtherProjectParentIdInLocatorShouldPass() {
         checkedWithSuperUser.getProjectRequest().create(projectTestData);
 
@@ -167,7 +167,7 @@ public class CreateProjectTest extends BaseApiTest {
         softy.assertThat(project.getParentProject().getId()).isEqualTo(projectTestData.getId());
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createProjectRequestWithProjectParentNameInLocatorShouldPass() {
         checkedWithSuperUser.getProjectRequest().create(projectTestData);
 
@@ -180,7 +180,7 @@ public class CreateProjectTest extends BaseApiTest {
         softy.assertThat(project.getParentProject().getName()).isEqualTo(projectTestData.getName());
     }
 
-    @Test
+    @Test(groups = {"API_regression"})
     public void createProjectRequestWithNonExistedProjectParentShouldFail() {
         var id = "notExisted";
         var locator = "id:" + id;
