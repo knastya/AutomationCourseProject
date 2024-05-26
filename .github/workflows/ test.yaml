@@ -90,4 +90,4 @@ jobs:
         # Указываем группу, чтобы еще раз не запустить тесты, которые использовались для сетапа сервера и агента
         run: |
           set -o pipefail
-          ./mvnw test -Dsmoke=teamcity-suites/api-suite.xml --no-transfer-progress
+          ./mvnw test -Dtest=teamcity-suites/api-suite.xml --no-transfer-progress
