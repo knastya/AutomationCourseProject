@@ -26,6 +26,7 @@ public class ProjectsPage  extends FavoritesPage {
     }
 
     public List<ProjectElement> getSubprojects() {
+        waitUntilLoadingIsAbsent();
         subprojects.filterBy(visible).shouldHave(sizeGreaterThanOrEqual(1), ofSeconds(10));
         return generatePageElements(subprojects, ProjectElement::new);
     }

@@ -37,11 +37,11 @@ public class Page {
         savingWaitingMarker.shouldNotBe(visible, ofSeconds(30));
     }
 
-    public <T extends PageElement> List<T> generatePageElements(
+    public <T extends PageElement> List<T> generatePageElements (
             ElementsCollection collection,
             Function<SelenideElement, T> creator) {
         var elements = new ArrayList<T>();
-        collection.forEach(webElement -> elements.add(creator.apply(webElement)));
+        collection.asDynamicIterable().forEach(webElement -> elements.add(creator.apply(webElement)));
         return elements;
     }
 }
