@@ -9,7 +9,7 @@ import static com.example.teamcity.api.generators.TestDataGenerator.ROOT;
 
 public class CreateNewProjectTest extends BaseUiTest {
 
-    @Test(groups = {"UI_regression"})
+    @Test
     public void userShouldBeAbleCreateNewProject() {
         var testData = testDataStorage.addTestData();
         var url = "https://github.com/knastya/AutomationCourseProject";
@@ -28,7 +28,7 @@ public class CreateNewProjectTest extends BaseUiTest {
                 .getHeader().shouldHave(text(testData.getProject().getName()));
     }
 
-    @Test(groups = {"UI_regression"})
+    @Test
     public void userShouldBeAbleCreateNewProjectWithManualOption() {
         var testData = testDataStorage.addTestData();
 

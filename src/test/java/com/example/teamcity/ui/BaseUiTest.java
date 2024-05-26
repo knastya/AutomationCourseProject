@@ -11,7 +11,7 @@ import static java.lang.String.format;
 
 public class BaseUiTest extends BaseTest {
 
-    @BeforeSuite(groups = {"UI_regression"})
+    @BeforeSuite
     public void setupTests() {
         Configuration.baseUrl = format("http://%s", Config.getProperty("host"));
         Configuration.remote = Config.getProperty("remote");

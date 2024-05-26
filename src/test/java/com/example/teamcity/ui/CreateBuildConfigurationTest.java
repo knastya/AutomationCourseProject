@@ -10,7 +10,7 @@ import static java.lang.String.format;
 
 public class CreateBuildConfigurationTest extends BaseUiTest {
 
-    @Test(groups = {"UI_regression"})
+    @Test
     public void userShouldBeAbleCreateBuildConfigByUrl() {
         var testData = testDataStorage.addTestData();
         var url = "https://github.com/knastya/AutomationCourseProject";
@@ -35,7 +35,7 @@ public class CreateBuildConfigurationTest extends BaseUiTest {
                 .checkBuildName(buildName);
     }
 
-    @Test(groups = {"UI_regression"})
+    @Test
     public void userShouldBeAbleCreateBuildConfigWithManualOption() {
         var testData = testDataStorage.addTestData();
         var url = "https://github.com/knastya/AutomationCourseProject";

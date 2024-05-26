@@ -24,7 +24,7 @@ import static org.hamcrest.Matchers.containsString;
 
 public class RolesTest extends BaseApiTest {
 
-    @BeforeClass(groups = {"API_regression"})
+    @BeforeClass
     public void setup() {
         Modules modules = Modules.builder()
                 .module(Arrays.asList(
@@ -34,7 +34,7 @@ public class RolesTest extends BaseApiTest {
         new CheckedAuthSettings(superUserSpec()).update(authSettings);
     }
 
-    @Test(groups = {"API_regression"})
+    @Test
     public void unauthorizedUserShouldNotHaveRightToCreateProject() {
         var testData = testDataStorage.addTestData();
 
@@ -51,7 +51,7 @@ public class RolesTest extends BaseApiTest {
                 ));
     }
 
-    @Test(groups = {"API_regression"})
+    @Test
     public void systemAdminShouldHaveRightsToCreateProject() {
         var testData = testDataStorage.addTestData();
 
@@ -66,7 +66,7 @@ public class RolesTest extends BaseApiTest {
         softy.assertThat(project.getId()).isEqualTo(testData.getProject().getId());
     }
 
-    @Test(groups = {"API_regression"})
+    @Test
     public void projectAdminShouldHaveRightsToCreateBuildConfigToHisProject() {
         var testData = testDataStorage.addTestData();
 
@@ -85,7 +85,7 @@ public class RolesTest extends BaseApiTest {
         softy.assertThat(buildConfig.getId()).isNotEqualTo(testData.getBuildType().getId());
     }
 
-    @Test(groups = {"API_regression"})
+    @Test
     public void projectAdminShouldNotHaveRightsToCreateBuildConfigToAnotherProject() {
         var firstTestData = testDataStorage.addTestData();
         var secondTestData = testDataStorage.addTestData();
