@@ -131,10 +131,10 @@ jobs:
             api_coverage/swagger-coverage-report.html
             api_coverage/swagger-coverage-results.json
 
-      - name: Publish Swagger test report
-        uses: peaceiris/actions-gh-pages@v3
-        if: always()
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: api_coverage/swagger-coverage-report.json
+#      - name: Publish Swagger test report
+#        uses: peaceiris/actions-gh-pages@v3
+#        if: always()
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_branch: gh-pages
+#          publish_dir: api_coverage/swagger-coverage-report.json
