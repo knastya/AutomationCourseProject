@@ -22,6 +22,7 @@
         <assertj-core.version>3.22.0</assertj-core.version>
         <selenide.version>7.0.2</selenide.version>
         <suiteXmlFile>teamcity-suites/api-suite.xml</suiteXmlFile>
+        <swagger-coverage-rest-assured.version>1.5.0</swagger-coverage-rest-assured.version>
     </properties>
 
     <dependencies>
@@ -89,6 +90,11 @@
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>${selenide.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.viclovsky</groupId>
+            <artifactId>swagger-coverage-rest-assured</artifactId>
+            <version>${swagger-coverage-rest-assured.version}</version>
         </dependency>
     </dependencies>
     <build>
