@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="60" passed="60" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-01T19:41:41 UTC" name="API Suite" finished-at="2024-06-01T19:42:03 UTC" duration-ms="21789">
+    <groups>
+    </groups>
+    <test started-at="2024-06-01T19:41:41 UTC" name="API Test" finished-at="2024-06-01T19:42:03 UTC" duration-ms="21789">
+      <class name="com.example.teamcity.api.CreateProjectTest">
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:41:59 UTC" name="before" finished-at="2024-06-01T19:41:59 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:41:59 UTC" name="beforeTest" finished-at="2024-06-01T19:41:59 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithCopyAllAssociatedSettingsFieldFalseShouldPass()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:41:59 UTC" name="createProjectRequestWithCopyAllAssociatedSettingsFieldFalseShouldPass" finished-at="2024-06-01T19:41:59 UTC" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCopyAllAssociatedSettingsFieldFalseShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:41:59 UTC" name="afterTest" finished-at="2024-06-01T19:41:59 UTC" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:41:59 UTC" name="beforeTest" finished-at="2024-06-01T19:41:59 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithCorrectIdShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:41:59 UTC" name="createProjectRequestWithCorrectIdShouldPass" data-provider="correctIdsProvider" finished-at="2024-06-01T19:41:59 UTC" duration-ms="73" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FxoyiwbBDaRPezSbVAHcfYvMHBBWHtqQiXgqAPfgzzzsjQfzkOgjIgfhmCBdfVrYKiKAEBRSpJVWLEburWMEjwhttMredpvQhRVXqyUrFOxykZSsHDNGbnerlQKiidNirrzQBXbPGGrTtDioPrxSdvAyhypyGKBrfVIIBjDhupcRuQrVtHOcOZVUZUDrWrNAkCTPIpEXAvjfsiqARDlmiGWnWDixgZjDX]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCorrectIdShouldPass -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:41:59 UTC" name="before" finished-at="2024-06-01T19:41:59 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:41:59 UTC" name="afterTest" finished-at="2024-06-01T19:41:59 UTC" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:41:59 UTC" name="beforeTest" finished-at="2024-06-01T19:41:59 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithCorrectIdShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:41:59 UTC" name="createProjectRequestWithCorrectIdShouldPass" data-provider="correctIdsProvider" finished-at="2024-06-01T19:42:00 UTC" duration-ms="69" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCorrectIdShouldPass -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:41:59 UTC" name="before" finished-at="2024-06-01T19:41:59 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithCorrectIdShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithCorrectIdShouldPass" data-provider="correctIdsProvider" finished-at="2024-06-01T19:42:00 UTC" duration-ms="61" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[xvfw_37689]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCorrectIdShouldPass -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithCorrectIdShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithCorrectIdShouldPass" data-provider="correctIdsProvider" finished-at="2024-06-01T19:42:00 UTC" duration-ms="71" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[l04247]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCorrectIdShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:42:00 UTC" duration-ms="49" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IbjdIyMoSpSDBUNRTTxqdhSFJnkZzssIOLAXdthPylTeuQHklBNiVuVkGzIkxVDJiwTPMsDptnyrCuBQ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:42:00 UTC" duration-ms="49" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createProjectRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:42:00 UTC" duration-ms="47" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ Spaces Case  ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:42:00 UTC" duration-ms="66" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[836058592913201]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createProjectRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:42:00 UTC" duration-ms="52" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[юьöюéь]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:42:00 UTC" duration-ms="57" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[specialSymbols~!@#$%^&*()-_=+[]\{}|;':",./<>?]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method signature="createProjectRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:42:00 UTC" duration-ms="49" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[😀]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createProjectRequestWithEmptyNameShouldFail()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithEmptyNameShouldFail" finished-at="2024-06-01T19:42:00 UTC" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithEmptyNameShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithExistedIdShouldFail()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithExistedIdShouldFail" finished-at="2024-06-01T19:42:00 UTC" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithExistedIdShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="afterTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="beforeTest" finished-at="2024-06-01T19:42:00 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithExistedNameShouldFail()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="createProjectRequestWithExistedNameShouldFail" finished-at="2024-06-01T19:42:01 UTC" duration-ms="70" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithExistedNameShouldFail -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:00 UTC" name="before" finished-at="2024-06-01T19:42:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createProjectRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:42:01 UTC" duration-ms="30" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NCGWWdXeZwyigTkJntHYSCPgsSZkqrjKggSELsLmpuDTrXCeRyRCIbOSnYZCTvrmXLDNDIAwDGUnSfyNgUlgEWRKavjNLxGBnftrIInhrXuYwzerAzYoNScFTQWYDAamQirFZVzPQpXyLAnmoeWdyFHjTxuiAOlWbLYfJXSWStyejjOkmlspzNRXdTfNqtBQVjhIvpJFCOrDtajLLdjRFmRBFBGnDFxNKp]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method signature="createProjectRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:42:01 UTC" duration-ms="50" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ Gmvk]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:42:01 UTC" duration-ms="23" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7800EEIy]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:42:01 UTC" duration-ms="29" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[_uNgs]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createProjectRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:42:01 UTC" duration-ms="23" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[BbIPслово]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:42:01 UTC" duration-ms="33" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[QFku~]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createProjectRequestWithNonExistedProjectParentShouldFail()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithNonExistedProjectParentShouldFail" finished-at="2024-06-01T19:42:01 UTC" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithNonExistedProjectParentShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithOtherProjectParentIdInLocatorShouldPass()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithOtherProjectParentIdInLocatorShouldPass" finished-at="2024-06-01T19:42:01 UTC" duration-ms="128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithOtherProjectParentIdInLocatorShouldPass -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createProjectRequestWithProjectParentNameInLocatorShouldPass()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithProjectParentNameInLocatorShouldPass" finished-at="2024-06-01T19:42:01 UTC" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithProjectParentNameInLocatorShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithRootProjectParentIdInLocatorShouldPass()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithRootProjectParentIdInLocatorShouldPass" finished-at="2024-06-01T19:42:01 UTC" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithRootProjectParentIdInLocatorShouldPass -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createProjectRequestWithoutIdShouldPass()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithoutIdShouldPass" finished-at="2024-06-01T19:42:01 UTC" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithoutIdShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="before" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="beforeTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createProjectRequestWithoutNameShouldFail()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="createProjectRequestWithoutNameShouldFail" finished-at="2024-06-01T19:42:01 UTC" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProjectRequestWithoutNameShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.CreateProjectTest@79afa369]" started-at="2024-06-01T19:42:01 UTC" name="afterTest" finished-at="2024-06-01T19:42:01 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.example.teamcity.api.CreateProjectTest -->
+      <class name="com.example.teamcity.api.BuildConfigurationTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:41 UTC" name="beforeTest" finished-at="2024-06-01T19:41:42 UTC" duration-ms="588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:42 UTC" name="before" finished-at="2024-06-01T19:41:47 UTC" duration-ms="5454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCommandLineStepsShouldPass()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:47 UTC" name="createBuildConfigRequestWithCommandLineStepsShouldPass" finished-at="2024-06-01T19:41:51 UTC" duration-ms="3177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCommandLineStepsShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:51 UTC" name="afterTest" finished-at="2024-06-01T19:41:51 UTC" duration-ms="170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:51 UTC" name="beforeTest" finished-at="2024-06-01T19:41:51 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:51 UTC" name="before" finished-at="2024-06-01T19:41:51 UTC" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCorrectIdShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:51 UTC" name="createBuildConfigRequestWithCorrectIdShouldPass" data-provider="correctIdsProvider" finished-at="2024-06-01T19:41:51 UTC" duration-ms="142" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[KDZJAIpsGPruuYeqUPcfLjDNyXwOqHoVwxFCZtVLMaUYcmqKdOqWNpJakDbScRePzFCpwEQEFoWFfdkdAWBCGosXqHIloRbGsGAXlOtyRWxaOwhrHkdeBxrcvKhMqzxPAOtQMOKAsxpEycLcbUvvtYHuQLPgqsxIRtvYWTZpVlskIfprPJWdNTopjwJOOFIngreDLpJJSwRAGWlfnKbLBqcgPvCfImbRN]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectIdShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:51 UTC" name="afterTest" finished-at="2024-06-01T19:41:51 UTC" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:51 UTC" name="beforeTest" finished-at="2024-06-01T19:41:51 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:51 UTC" name="before" finished-at="2024-06-01T19:41:51 UTC" duration-ms="103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCorrectIdShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:51 UTC" name="createBuildConfigRequestWithCorrectIdShouldPass" data-provider="correctIdsProvider" finished-at="2024-06-01T19:41:52 UTC" duration-ms="144" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectIdShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="afterTest" finished-at="2024-06-01T19:41:52 UTC" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="before" finished-at="2024-06-01T19:41:52 UTC" duration-ms="156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="beforeTest" finished-at="2024-06-01T19:41:52 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createBuildConfigRequestWithCorrectIdShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="createBuildConfigRequestWithCorrectIdShouldPass" data-provider="correctIdsProvider" finished-at="2024-06-01T19:41:52 UTC" duration-ms="103" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[nQDi_26457]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectIdShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="afterTest" finished-at="2024-06-01T19:41:52 UTC" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="beforeTest" finished-at="2024-06-01T19:41:52 UTC" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="before" finished-at="2024-06-01T19:41:52 UTC" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCorrectIdShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="createBuildConfigRequestWithCorrectIdShouldPass" data-provider="correctIdsProvider" finished-at="2024-06-01T19:41:52 UTC" duration-ms="108" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[l32649]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectIdShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="afterTest" finished-at="2024-06-01T19:41:52 UTC" duration-ms="72" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="beforeTest" finished-at="2024-06-01T19:41:52 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="before" finished-at="2024-06-01T19:41:52 UTC" duration-ms="144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="createBuildConfigRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:41:52 UTC" duration-ms="149" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CTWHwrjJohLNcfmJhMxubfTjvPIcDCNFJDKnNQIdSmYKcdpLLtOwVjHVlulqqQwkeQMMpRTBQitmZgmv]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:52 UTC" name="afterTest" finished-at="2024-06-01T19:41:53 UTC" duration-ms="70" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="beforeTest" finished-at="2024-06-01T19:41:53 UTC" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="before" finished-at="2024-06-01T19:41:53 UTC" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="createBuildConfigRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:41:53 UTC" duration-ms="108" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[W]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="afterTest" finished-at="2024-06-01T19:41:53 UTC" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="beforeTest" finished-at="2024-06-01T19:41:53 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="before" finished-at="2024-06-01T19:41:53 UTC" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="createBuildConfigRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:41:53 UTC" duration-ms="109" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ Spaces Case  ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="afterTest" finished-at="2024-06-01T19:41:53 UTC" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="beforeTest" finished-at="2024-06-01T19:41:53 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="before" finished-at="2024-06-01T19:41:53 UTC" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="createBuildConfigRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:41:53 UTC" duration-ms="88" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="afterTest" finished-at="2024-06-01T19:41:53 UTC" duration-ms="54" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="beforeTest" finished-at="2024-06-01T19:41:53 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="before" finished-at="2024-06-01T19:41:53 UTC" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="createBuildConfigRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:41:53 UTC" duration-ms="86" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[923022689526343]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="afterTest" finished-at="2024-06-01T19:41:53 UTC" duration-ms="54" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="beforeTest" finished-at="2024-06-01T19:41:53 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:53 UTC" name="before" finished-at="2024-06-01T19:41:54 UTC" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:54 UTC" name="createBuildConfigRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:41:54 UTC" duration-ms="77" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[é漢é漢ö漢]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:54 UTC" name="afterTest" finished-at="2024-06-01T19:41:54 UTC" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:54 UTC" name="beforeTest" finished-at="2024-06-01T19:41:54 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:54 UTC" name="before" finished-at="2024-06-01T19:41:54 UTC" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:54 UTC" name="createBuildConfigRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:41:54 UTC" duration-ms="586" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[specialSymbols~!@#$%^&*()-_=+[]\{}|;':",./<>?]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:54 UTC" name="afterTest" finished-at="2024-06-01T19:41:54 UTC" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:54 UTC" name="beforeTest" finished-at="2024-06-01T19:41:54 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:54 UTC" name="before" finished-at="2024-06-01T19:41:54 UTC" duration-ms="55" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithCorrectNameShouldPass(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:54 UTC" name="createBuildConfigRequestWithCorrectNameShouldPass" data-provider="correctNamesProvider" finished-at="2024-06-01T19:41:55 UTC" duration-ms="86" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[😀]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithCorrectNameShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:55 UTC" name="afterTest" finished-at="2024-06-01T19:41:55 UTC" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:55 UTC" name="beforeTest" finished-at="2024-06-01T19:41:55 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:55 UTC" name="before" finished-at="2024-06-01T19:41:55 UTC" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithExistedIdInDifferentProjectShouldFail()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:55 UTC" name="createBuildConfigRequestWithExistedIdInDifferentProjectShouldFail" finished-at="2024-06-01T19:41:55 UTC" duration-ms="621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithExistedIdInDifferentProjectShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:55 UTC" name="afterTest" finished-at="2024-06-01T19:41:56 UTC" duration-ms="802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:56 UTC" name="beforeTest" finished-at="2024-06-01T19:41:56 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:56 UTC" name="before" finished-at="2024-06-01T19:41:56 UTC" duration-ms="69" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithExistedIdInSameProjectShouldFail()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:56 UTC" name="createBuildConfigRequestWithExistedIdInSameProjectShouldFail" finished-at="2024-06-01T19:41:56 UTC" duration-ms="150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithExistedIdInSameProjectShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:56 UTC" name="afterTest" finished-at="2024-06-01T19:41:56 UTC" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:56 UTC" name="beforeTest" finished-at="2024-06-01T19:41:56 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:56 UTC" name="before" finished-at="2024-06-01T19:41:56 UTC" duration-ms="70" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithExistedNameInOtherProjectShouldPass()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:56 UTC" name="createBuildConfigRequestWithExistedNameInOtherProjectShouldPass" finished-at="2024-06-01T19:41:57 UTC" duration-ms="241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithExistedNameInOtherProjectShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="afterTest" finished-at="2024-06-01T19:41:57 UTC" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="beforeTest" finished-at="2024-06-01T19:41:57 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="before" finished-at="2024-06-01T19:41:57 UTC" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithExistedNameInSameProjectShouldFail()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="createBuildConfigRequestWithExistedNameInSameProjectShouldFail" finished-at="2024-06-01T19:41:57 UTC" duration-ms="78" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithExistedNameInSameProjectShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="afterTest" finished-at="2024-06-01T19:41:57 UTC" duration-ms="50" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="beforeTest" finished-at="2024-06-01T19:41:57 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="before" finished-at="2024-06-01T19:41:57 UTC" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="createBuildConfigRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:41:57 UTC" duration-ms="62" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ITTOcZHnrwkGFmFHmsgsBMkNYUkANIJOlFyMOAaoCwxSpKBYnuIDutBjHIYCgiCYfChzgsshdATybobuYYCUfCeKLIfGUCbNLQALQcwiXGAVzfOZmScYTJNaItDDMFTAPIuffyBFxfENFreRYJwlPvpUmXfAnfxEHyuQrtRDYnnDxyBdthFqPMisAsulReCZnuJhSEjAaiLzHJQVeExVOgAyVrdtzDcpSQ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="afterTest" finished-at="2024-06-01T19:41:57 UTC" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="beforeTest" finished-at="2024-06-01T19:41:57 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="before" finished-at="2024-06-01T19:41:57 UTC" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="createBuildConfigRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:41:57 UTC" duration-ms="48" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ EvLq]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="afterTest" finished-at="2024-06-01T19:41:57 UTC" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="beforeTest" finished-at="2024-06-01T19:41:57 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="before" finished-at="2024-06-01T19:41:57 UTC" duration-ms="64" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="createBuildConfigRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:41:57 UTC" duration-ms="82" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6440aMZg]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="afterTest" finished-at="2024-06-01T19:41:57 UTC" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="beforeTest" finished-at="2024-06-01T19:41:57 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:57 UTC" name="before" finished-at="2024-06-01T19:41:58 UTC" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="createBuildConfigRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:41:58 UTC" duration-ms="35" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[_ROMz]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="afterTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="beforeTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="before" finished-at="2024-06-01T19:41:58 UTC" duration-ms="56" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="createBuildConfigRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:41:58 UTC" duration-ms="31" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[oEmnслово]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="afterTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="beforeTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="before" finished-at="2024-06-01T19:41:58 UTC" duration-ms="55" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithIncorrectIdShouldFail(java.lang.String)[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="createBuildConfigRequestWithIncorrectIdShouldFail" data-provider="incorrectIdsProvider" finished-at="2024-06-01T19:41:58 UTC" duration-ms="30" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FHVF~]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithIncorrectIdShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="afterTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="beforeTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="before" finished-at="2024-06-01T19:41:58 UTC" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithNonExistedProjectShouldFail()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="createBuildConfigRequestWithNonExistedProjectShouldFail" finished-at="2024-06-01T19:41:58 UTC" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithNonExistedProjectShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="afterTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="43" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="beforeTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="before" finished-at="2024-06-01T19:41:58 UTC" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithPowerShellStepsShouldPass()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="createBuildConfigRequestWithPowerShellStepsShouldPass" finished-at="2024-06-01T19:41:58 UTC" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithPowerShellStepsShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="afterTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="beforeTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="before" finished-at="2024-06-01T19:41:58 UTC" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithTwoStepsShouldPass()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="createBuildConfigRequestWithTwoStepsShouldPass" finished-at="2024-06-01T19:41:58 UTC" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithTwoStepsShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="afterTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="beforeTest" finished-at="2024-06-01T19:41:58 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="before" finished-at="2024-06-01T19:41:58 UTC" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithoutIdShouldPass()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="createBuildConfigRequestWithoutIdShouldPass" finished-at="2024-06-01T19:41:58 UTC" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithoutIdShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:58 UTC" name="afterTest" finished-at="2024-06-01T19:41:59 UTC" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:59 UTC" name="before" finished-at="2024-06-01T19:41:59 UTC" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:59 UTC" name="beforeTest" finished-at="2024-06-01T19:41:59 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="createBuildConfigRequestWithoutNameShouldFail()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:59 UTC" name="createBuildConfigRequestWithoutNameShouldFail" finished-at="2024-06-01T19:41:59 UTC" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithoutNameShouldFail -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:59 UTC" name="afterTest" finished-at="2024-06-01T19:41:59 UTC" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:59 UTC" name="beforeTest" finished-at="2024-06-01T19:41:59 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="before()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:59 UTC" name="before" finished-at="2024-06-01T19:41:59 UTC" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="createBuildConfigRequestWithoutStepsShouldPass()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:59 UTC" name="createBuildConfigRequestWithoutStepsShouldPass" finished-at="2024-06-01T19:41:59 UTC" duration-ms="517" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBuildConfigRequestWithoutStepsShouldPass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.BuildConfigurationTest@6da4feeb]" started-at="2024-06-01T19:41:59 UTC" name="afterTest" finished-at="2024-06-01T19:41:59 UTC" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.example.teamcity.api.BuildConfigurationTest -->
+      <class name="com.example.teamcity.api.RolesTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:01 UTC" name="setup" finished-at="2024-06-01T19:42:02 UTC" duration-ms="246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:02 UTC" name="beforeTest" finished-at="2024-06-01T19:42:02 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="projectAdminShouldHaveRightsToCreateBuildConfigToHisProject()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:02 UTC" name="projectAdminShouldHaveRightsToCreateBuildConfigToHisProject" finished-at="2024-06-01T19:42:02 UTC" duration-ms="600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- projectAdminShouldHaveRightsToCreateBuildConfigToHisProject -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:02 UTC" name="afterTest" finished-at="2024-06-01T19:42:02 UTC" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:02 UTC" name="beforeTest" finished-at="2024-06-01T19:42:02 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="projectAdminShouldNotHaveRightsToCreateBuildConfigToAnotherProject()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:02 UTC" name="projectAdminShouldNotHaveRightsToCreateBuildConfigToAnotherProject" finished-at="2024-06-01T19:42:03 UTC" duration-ms="317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- projectAdminShouldNotHaveRightsToCreateBuildConfigToAnotherProject -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:03 UTC" name="afterTest" finished-at="2024-06-01T19:42:03 UTC" duration-ms="132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:03 UTC" name="beforeTest" finished-at="2024-06-01T19:42:03 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="systemAdminShouldHaveRightsToCreateProject()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:03 UTC" name="systemAdminShouldHaveRightsToCreateProject" finished-at="2024-06-01T19:42:03 UTC" duration-ms="128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- systemAdminShouldHaveRightsToCreateProject -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:03 UTC" name="afterTest" finished-at="2024-06-01T19:42:03 UTC" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method signature="unauthorizedUserShouldNotHaveRightToCreateProject()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:03 UTC" name="unauthorizedUserShouldNotHaveRightToCreateProject" finished-at="2024-06-01T19:42:03 UTC" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unauthorizedUserShouldNotHaveRightToCreateProject -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:03 UTC" name="beforeTest" finished-at="2024-06-01T19:42:03 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.example.teamcity.api.RolesTest@4525e9e8]" started-at="2024-06-01T19:42:03 UTC" name="afterTest" finished-at="2024-06-01T19:42:03 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.example.teamcity.api.RolesTest -->
+    </test> <!-- API Test -->
+  </suite> <!-- API Suite -->
+</testng-results>

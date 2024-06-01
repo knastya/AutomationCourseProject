@@ -1,0 +1,380 @@
+<html>
+<head>
+<title>TestNG:  API Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>API Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>60/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Jun 01 19:41:41 UTC 2024</td>
+</tr>
+<tr><td>Total time:</td><td>21 seconds (21789 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectNameShouldPass()'><b>createBuildConfigRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters:  </td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithNonExistedProjectParentShouldFail()'><b>createProjectRequestWithNonExistedProjectParentShouldFail</b><br>Test class: com.example.teamcity.api.CreateProjectTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectIdShouldPass()'><b>createBuildConfigRequestWithCorrectIdShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: nQDi_26457</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCorrectNameShouldPass()'><b>createProjectRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: 836058592913201</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCopyAllAssociatedSettingsFieldFalseShouldPass()'><b>createProjectRequestWithCopyAllAssociatedSettingsFieldFalseShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithIncorrectIdShouldFail()'><b>createProjectRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: _uNgs</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithExistedNameInOtherProjectShouldPass()'><b>createBuildConfigRequestWithExistedNameInOtherProjectShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithExistedIdInDifferentProjectShouldFail()'><b>createBuildConfigRequestWithExistedIdInDifferentProjectShouldFail</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithIncorrectIdShouldFail()'><b>createBuildConfigRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: FHVF~</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithIncorrectIdShouldFail()'><b>createBuildConfigRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: 6440aMZg</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCommandLineStepsShouldPass()'><b>createBuildConfigRequestWithCommandLineStepsShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest</td>
+<td></td>
+<td>3</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectIdShouldPass()'><b>createBuildConfigRequestWithCorrectIdShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: l32649</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectNameShouldPass()'><b>createBuildConfigRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: 😀</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectNameShouldPass()'><b>createBuildConfigRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: specialSymbols~!@#$%^&*()-_=+[]\{}|;':",./<>?</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithIncorrectIdShouldFail()'><b>createProjectRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters:  Gmvk</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithoutNameShouldFail()'><b>createBuildConfigRequestWithoutNameShouldFail</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCorrectNameShouldPass()'><b>createProjectRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters:  Spaces Case  </td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCorrectNameShouldPass()'><b>createProjectRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: юьöюéь</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithIncorrectIdShouldFail()'><b>createProjectRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: QFku~</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectNameShouldPass()'><b>createBuildConfigRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: 923022689526343</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithEmptyNameShouldFail()'><b>createProjectRequestWithEmptyNameShouldFail</b><br>Test class: com.example.teamcity.api.CreateProjectTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.RolesTest.projectAdminShouldHaveRightsToCreateBuildConfigToHisProject()'><b>projectAdminShouldHaveRightsToCreateBuildConfigToHisProject</b><br>Test class: com.example.teamcity.api.RolesTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.RolesTest@4525e9e8</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithoutStepsShouldPass()'><b>createBuildConfigRequestWithoutStepsShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectNameShouldPass()'><b>createBuildConfigRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: é漢é漢ö漢</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithIncorrectIdShouldFail()'><b>createBuildConfigRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: ITTOcZHnrwkGFmFHmsgsBMkNYUkANIJOlFyMOAaoCwxSpKBYnuIDutBjHIYCgiCYfChzgsshdATybobuYYCUfCeKLIfGUCbNLQALQcwiXGAVzfOZmScYTJNaItDDMFTAPIuffyBFxfENFreRYJwlPvpUmXfAnfxEHyuQrtRDYnnDxyBdthFqPMisAsulReCZnuJhSEjAaiLzHJQVeExVOgAyVrdtzDcpSQ</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCorrectNameShouldPass()'><b>createProjectRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: specialSymbols~!@#$%^&*()-_=+[]\{}|;':",./<>?</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithIncorrectIdShouldFail()'><b>createProjectRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: 7800EEIy</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithExistedNameInSameProjectShouldFail()'><b>createBuildConfigRequestWithExistedNameInSameProjectShouldFail</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCorrectIdShouldPass()'><b>createProjectRequestWithCorrectIdShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: l04247</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithIncorrectIdShouldFail()'><b>createBuildConfigRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters:  EvLq</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithRootProjectParentIdInLocatorShouldPass()'><b>createProjectRequestWithRootProjectParentIdInLocatorShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.RolesTest.projectAdminShouldNotHaveRightsToCreateBuildConfigToAnotherProject()'><b>projectAdminShouldNotHaveRightsToCreateBuildConfigToAnotherProject</b><br>Test class: com.example.teamcity.api.RolesTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.RolesTest@4525e9e8</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithIncorrectIdShouldFail()'><b>createProjectRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: NCGWWdXeZwyigTkJntHYSCPgsSZkqrjKggSELsLmpuDTrXCeRyRCIbOSnYZCTvrmXLDNDIAwDGUnSfyNgUlgEWRKavjNLxGBnftrIInhrXuYwzerAzYoNScFTQWYDAamQirFZVzPQpXyLAnmoeWdyFHjTxuiAOlWbLYfJXSWStyejjOkmlspzNRXdTfNqtBQVjhIvpJFCOrDtajLLdjRFmRBFBGnDFxNKp</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithIncorrectIdShouldFail()'><b>createBuildConfigRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: oEmnслово</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectNameShouldPass()'><b>createBuildConfigRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: W</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCorrectIdShouldPass()'><b>createProjectRequestWithCorrectIdShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: B</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectIdShouldPass()'><b>createBuildConfigRequestWithCorrectIdShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: A</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithIncorrectIdShouldFail()'><b>createProjectRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: BbIPслово</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.RolesTest.unauthorizedUserShouldNotHaveRightToCreateProject()'><b>unauthorizedUserShouldNotHaveRightToCreateProject</b><br>Test class: com.example.teamcity.api.RolesTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.RolesTest@4525e9e8</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectIdShouldPass()'><b>createBuildConfigRequestWithCorrectIdShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: KDZJAIpsGPruuYeqUPcfLjDNyXwOqHoVwxFCZtVLMaUYcmqKdOqWNpJakDbScRePzFCpwEQEFoWFfdkdAWBCGosXqHIloRbGsGAXlOtyRWxaOwhrHkdeBxrcvKhMqzxPAOtQMOKAsxpEycLcbUvvtYHuQLPgqsxIRtvYWTZpVlskIfprPJWdNTopjwJOOFIngreDLpJJSwRAGWlfnKbLBqcgPvCfImbRN</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCorrectNameShouldPass()'><b>createProjectRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: IbjdIyMoSpSDBUNRTTxqdhSFJnkZzssIOLAXdthPylTeuQHklBNiVuVkGzIkxVDJiwTPMsDptnyrCuBQ</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithoutIdShouldPass()'><b>createProjectRequestWithoutIdShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithoutIdShouldPass()'><b>createBuildConfigRequestWithoutIdShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithExistedIdInSameProjectShouldFail()'><b>createBuildConfigRequestWithExistedIdInSameProjectShouldFail</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.RolesTest.systemAdminShouldHaveRightsToCreateProject()'><b>systemAdminShouldHaveRightsToCreateProject</b><br>Test class: com.example.teamcity.api.RolesTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.RolesTest@4525e9e8</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithProjectParentNameInLocatorShouldPass()'><b>createProjectRequestWithProjectParentNameInLocatorShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithoutNameShouldFail()'><b>createProjectRequestWithoutNameShouldFail</b><br>Test class: com.example.teamcity.api.CreateProjectTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCorrectNameShouldPass()'><b>createProjectRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: e</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithNonExistedProjectShouldFail()'><b>createBuildConfigRequestWithNonExistedProjectShouldFail</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCorrectIdShouldPass()'><b>createProjectRequestWithCorrectIdShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: xvfw_37689</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithExistedIdShouldFail()'><b>createProjectRequestWithExistedIdShouldFail</b><br>Test class: com.example.teamcity.api.CreateProjectTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithPowerShellStepsShouldPass()'><b>createBuildConfigRequestWithPowerShellStepsShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithTwoStepsShouldPass()'><b>createBuildConfigRequestWithTwoStepsShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithIncorrectIdShouldFail()'><b>createBuildConfigRequestWithIncorrectIdShouldFail</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: _ROMz</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithExistedNameShouldFail()'><b>createProjectRequestWithExistedNameShouldFail</b><br>Test class: com.example.teamcity.api.CreateProjectTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectNameShouldPass()'><b>createBuildConfigRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters:  Spaces Case  </td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCorrectNameShouldPass()'><b>createProjectRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: 😀</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithCorrectIdShouldPass()'><b>createProjectRequestWithCorrectIdShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest<br>Parameters: FxoyiwbBDaRPezSbVAHcfYvMHBBWHtqQiXgqAPfgzzzsjQfzkOgjIgfhmCBdfVrYKiKAEBRSpJVWLEburWMEjwhttMredpvQhRVXqyUrFOxykZSsHDNGbnerlQKiidNirrzQBXbPGGrTtDioPrxSdvAyhypyGKBrfVIIBjDhupcRuQrVtHOcOZVUZUDrWrNAkCTPIpEXAvjfsiqARDlmiGWnWDixgZjDX</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+<tr>
+<td title='com.example.teamcity.api.BuildConfigurationTest.createBuildConfigRequestWithCorrectNameShouldPass()'><b>createBuildConfigRequestWithCorrectNameShouldPass</b><br>Test class: com.example.teamcity.api.BuildConfigurationTest<br>Parameters: CTWHwrjJohLNcfmJhMxubfTjvPIcDCNFJDKnNQIdSmYKcdpLLtOwVjHVlulqqQwkeQMMpRTBQitmZgmv</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.BuildConfigurationTest@6da4feeb</td></tr>
+<tr>
+<td title='com.example.teamcity.api.CreateProjectTest.createProjectRequestWithOtherProjectParentIdInLocatorShouldPass()'><b>createProjectRequestWithOtherProjectParentIdInLocatorShouldPass</b><br>Test class: com.example.teamcity.api.CreateProjectTest</td>
+<td></td>
+<td>0</td>
+<td>com.example.teamcity.api.CreateProjectTest@79afa369</td></tr>
+</table><p>
+</body>
+</html>

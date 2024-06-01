@@ -1,0 +1,89 @@
+### Data
+@url = http://192.168.10.14:8111
+@path = {{url}}/app/rest/
+
+### 0. Get CSRF token
+GET {{url}}/authenticationTest.html?csrf
+Accept: application/json
+Authorization: Basic admin admin
+
+> {%
+    client.global.set("token", response.body);
+    client.global.set("projectId", $random.alphabetic(10));
+    client.global.set("buildConfId", $random.alphabetic(10));
+%}
+
+### 1. Create project
+POST {{path}}/projects
+Content-Type: application/json
+Accept: application/json
+X-TC-CSRF-Token: {{token}}
+
+{
+  "parentProject": {
+    "locator": "id:_Root"
+  },
+  "name": "Test Project {{projectId}}",
+  "id": "{{projectId}}",
+  "copyAllAssociatedSettings": true
+}
+
+### 2. Create build configuration
+POST {{path}}/buildTypes
+Content-Type: application/json
+Accept: application/json
+X-TC-CSRF-Token: {{token}}
+
+{
+  "id": "{{buildConfId}}",
+  "name": "Print Hello World",
+  "project": {
+    "id": "{{projectId}}"
+  },
+  "steps": {
+    "step": [
+      {
+        "name": "Print Hello World",
+        "type": "simpleRunner",
+        "properties": {
+          "property": [
+            {
+              "name": "script.content",
+              "value": "echo 'Hello World!'"
+            },
+            {
+              "name": "teamcity.step.mode",
+              "value": "default"
+            },
+            {
+              "name": "use.custom.script",
+              "value": "true"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+### 3. Run created build
+POST {{path}}/buildQueue
+Content-Type: application/json
+Accept: application/json
+X-TC-CSRF-Token: {{token}}
+
+{
+	"buildType": {
+    	"id": "{{buildConfId}}"
+	}
+}
+
+> {%
+    client.global.set("build_id", response.body.id);
+%}
+
+### 4. Check build status
+GET {{path}}/builds/id:{{build_id}}
+Content-Type: application/json
+Accept: application/json
+X-TC-CSRF-Token: {{token}}
