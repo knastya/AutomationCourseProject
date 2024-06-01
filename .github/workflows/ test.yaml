@@ -95,15 +95,15 @@ jobs:
         if: always()
         continue-on-error: true
         with:
-            ref: gh-pages/allure
-            path: gh-pages/allure
+            ref: gh-pages
+            path: gh-pages
 
       - name: Build test report
         uses: simple-elf/allure-report-action@v1.7
         if: always()
         with:
-            gh_pages: gh-pages/allure
-            allure_history: allure/allure-history
+            gh_pages: gh-pages
+            allure_history: allure-history
             allure_results: target/allure-results
 
       - name: Publish test report
@@ -111,8 +111,9 @@ jobs:
         if: always()
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_branch: gh-pages/allure
-            publish_dir: allure/allure-history
+            publish_branch: gh-pages
+            publish_dir: allure-history
+            destination_dir: allure
 
       # Создание репорта с покрытием API тестов, основанного на Swagger. Документация: https://github.com/viclovsky/swagger-coverage
       - name: Run Swagger coverage
