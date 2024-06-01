@@ -90,30 +90,30 @@ jobs:
 #        if: always()
 #        run: ./mvnw test -DsuiteXmlFile=teamcity-suites/ui-suite.xml --no-transfer-progress
 
-#      - name: Load test report history
-#        uses: actions/checkout@v4
-#        if: always()
-#        continue-on-error: true
-#        with:
-#            ref: gh-pages
-#            path: gh-pages/allure
-#
-#      - name: Build test report
-#        uses: simple-elf/allure-report-action@v1.7
-#        if: always()
-#        with:
-#            gh_pages: gh-pages/allure
-#            allure_history: allure/allure-history
-#            allure_results: target/allure-results
-#
-#      - name: Publish test report
-#        uses: peaceiris/actions-gh-pages@v3
-#        if: always()
-#        with:
-#            github_token: ${{ secrets.GITHUB_TOKEN }}
-#            publish_branch: gh-pages
-#            publish_dir: allure/allure-history
-#            destination_dir: allure
+      - name: Load test report history
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+            ref: gh-pages
+            path: gh-pages/allure
+
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
+        with:
+            gh_pages: gh-pages/allure
+            allure_history: allure/allure-history
+            allure_results: target/allure-results
+
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_branch: gh-pages
+            publish_dir: allure/allure-history
+            destination_dir: allure
 
       # Создание репорта с покрытием API тестов, основанного на Swagger. Документация: https://github.com/viclovsky/swagger-coverage
       - name: Run Swagger coverage
@@ -145,4 +145,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: coverage
-#          destination_dir: api_coverage
+          destination_dir: api_coverage
