@@ -5,6 +5,7 @@ import com.example.teamcity.api.models.ToDelete;
 import com.example.teamcity.api.requests.CrudInterface;
 import com.example.teamcity.api.requests.Endpoint;
 import com.example.teamcity.api.requests.Request;
+import com.github.viclovsky.swagger.coverage.SwaggerCoverageRestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -20,6 +21,7 @@ public class UncheckedRequestGenerator extends Request implements CrudInterface 
     @Override
     public Response create(Object obj) {
         var response = given()
+                .filter(new SwaggerCoverageRestAssured())
                 .spec(spec)
                 .body(obj)
                 .post(endpoint.getUrl());
@@ -41,6 +43,7 @@ public class UncheckedRequestGenerator extends Request implements CrudInterface 
     @Override
     public Response update(String id, Object obj) {
         return given()
+                .filter(new SwaggerCoverageRestAssured())
                 .spec(spec)
                 .body(obj)
                 .get(endpoint.getUrl() + "/id:" + id);
@@ -49,12 +52,14 @@ public class UncheckedRequestGenerator extends Request implements CrudInterface 
     @Override
     public Response delete(String id) {
         return given()
+                .filter(new SwaggerCoverageRestAssured())
                 .spec(spec)
                 .delete(endpoint.getUrl() + "/id:" + id);
     }
 
     public Response deleteByUsername(String username) {
         return given()
+                .filter(new SwaggerCoverageRestAssured())
                 .spec(spec)
                 .delete(endpoint.getUrl() + "/username:" + username);
     }

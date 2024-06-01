@@ -1,6 +1,7 @@
 package com.example.teamcity.api.models;
 
 import com.example.teamcity.api.requests.unchecked.UncheckedRequests;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,6 +16,7 @@ import static com.example.teamcity.api.spec.Specifications.superUserSpec;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class NewProjectDescription implements ToDelete {
     private Project parentProject;
     private String name;
