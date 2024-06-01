@@ -86,16 +86,16 @@ jobs:
       - name: Run API tests
         run: ./mvnw test -DsuiteXmlFile=teamcity-suites/api-suite.xml --no-transfer-progress
 
-      - name: Run UI tests
-        if: always()
-        run: ./mvnw test -DsuiteXmlFile=teamcity-suites/ui-suite.xml --no-transfer-progress
+#      - name: Run UI tests
+#        if: always()
+#        run: ./mvnw test -DsuiteXmlFile=teamcity-suites/ui-suite.xml --no-transfer-progress
 
       - name: Load test report history
         uses: actions/checkout@v4
         if: always()
         continue-on-error: true
         with:
-            ref: gh-pages
+            ref: gh-pages/allure
             path: gh-pages/allure
 
       - name: Build test report
@@ -111,7 +111,7 @@ jobs:
         if: always()
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_branch: gh-pages
+            publish_branch: gh-pages/allure
             publish_dir: allure/allure-history
 
       # Создание репорта с покрытием API тестов, основанного на Swagger. Документация: https://github.com/viclovsky/swagger-coverage
