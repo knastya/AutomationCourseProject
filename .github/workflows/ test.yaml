@@ -61,11 +61,11 @@ jobs:
       - name: Sleep for 1 minute
         run: sleep 40s
 
-#      - name: Get containers logs
-#        uses: jwalton/gh-docker-logs@v2
+      - name: Get containers logs
+        uses: jwalton/gh-docker-logs@v2
 
-#      - name: Verify config.properties
-#        run: cat src/main/resources/config.properties
+      - name: Verify config.properties
+        run: cat src/main/resources/config.properties
 
       - name: Set up TeamCity server
         # Настройка сервера при первом запуске (принятие лицензии, выбор базы данных и т.д.), реализованная в виде теста
@@ -80,15 +80,15 @@ jobs:
       - name: Set up superUserToken config property
         run: echo "superUserToken=$SUPER_USER_TOKEN" >> src/main/resources/config.properties
 
-#      - name: Verify config.properties
-#        run: cat src/main/resources/config.properties
+      - name: Verify config.properties
+        run: cat src/main/resources/config.properties
 
       - name: Run API tests
         run: ./mvnw test -DsuiteXmlFile=teamcity-suites/api-suite.xml --no-transfer-progress
 
-#      - name: Run UI tests
-#        if: always()
-#        run: ./mvnw test -DsuiteXmlFile=teamcity-suites/ui-suite.xml --no-transfer-progress
+      - name: Run UI tests
+        if: always()
+        run: ./mvnw test -DsuiteXmlFile=teamcity-suites/ui-suite.xml --no-transfer-progress
 
       - name: Load test report history
         uses: actions/checkout@v4
@@ -121,17 +121,7 @@ jobs:
          chmod +x ./swagger-coverage/bin/swagger-coverage-commandline
          ./swagger-coverage/bin/swagger-coverage-commandline -s http://$HOST:8111/app/rest/swagger.json -i swagger-coverage-output
 
-#      # Swagger coverage репорт сохраняется в артефакты GitHub Actions прогона
-#      - name: Save Swagger coverage
-#        uses: actions/upload-artifact@v4
-#        if: always()
-#        with:
-#          name: swagger-coverage
-#          path: |
-#            swagger-coverage-report.html
-#            swagger-coverage-results.json
-
-      - name: Folder
+      - name: Rename report page and move to folder
         if: always()
         run: |
           mkdir coverage
