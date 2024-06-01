@@ -132,11 +132,17 @@ jobs:
             swagger-coverage-report.html
             swagger-coverage-results.json
 
+      - name: Folder
+        if: always()
+        run: |
+          mkdir coverage
+          mv swagger-coverage-report.html coverage/index.html
+
       - name: Publish Swagger test report
         uses: peaceiris/actions-gh-pages@v3
         if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./swagger-coverage-report.html
+          publish_dir: coverage
 #          destination_dir: api_coverage
