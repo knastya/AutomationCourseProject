@@ -58,7 +58,7 @@ jobs:
           -p 8111:8111 \
           jetbrains/teamcity-server:2023.11.1
 
-      - name: Sleep for 1 minute
+      - name: Sleep for 40s
         run: sleep 40s
 
       - name: Get containers logs
