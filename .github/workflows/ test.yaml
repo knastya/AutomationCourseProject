@@ -143,7 +143,7 @@ jobs:
         if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          keep_files: true
+
           publish_branch: gh-pages
           publish_dir: coverage
           destination_dir: api_coverage
