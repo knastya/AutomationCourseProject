@@ -1,17 +1,22 @@
 package com.example.teamcity.api;
 
-import api.requests.checked.CheckedBuildConfig;
-import api.requests.checked.CheckedProject;
-import api.requests.unchecked.UncheckedBuildConfig;
-import api.requests.unchecked.UncheckedProject;
+import com.example.teamcity.api.models.AuthSettings;
+import com.example.teamcity.api.models.Modules;
+import com.example.teamcity.api.requests.checked.CheckedAuthSettings;
+import com.example.teamcity.api.requests.checked.CheckedRequests;
+import com.example.teamcity.api.requests.unchecked.UncheckedRequests;
 import org.apache.http.HttpStatus;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static api.enums.RoleId.PROJECT_ADMIN;
-import static api.enums.RoleId.SYSTEM_ADMIN;
-import static api.generators.TestDataGenerator.generateRoles;
-import static api.spec.Specifications.authSpec;
-import static api.spec.Specifications.unAuthSpec;
+import java.util.Arrays;
+
+import static com.example.teamcity.api.enums.RoleId.PROJECT_ADMIN;
+import static com.example.teamcity.api.enums.RoleId.SYSTEM_ADMIN;
+import static com.example.teamcity.api.generators.TestDataGenerator.generateRoles;
+import static com.example.teamcity.api.generators.TestDataGenerator.projectScope;
+import static com.example.teamcity.api.models.Module.*;
+import static com.example.teamcity.api.spec.Specifications.*;
 import static java.lang.String.format;
 import static org.apache.hc.core5.http.HttpStatus.SC_FORBIDDEN;
 import static org.apache.hc.core5.http.HttpStatus.SC_NOT_FOUND;
@@ -19,14 +24,24 @@ import static org.hamcrest.Matchers.containsString;
 
 public class RolesTest extends BaseApiTest {
 
+    @BeforeClass
+    public void setup() {
+        Modules modules = Modules.builder()
+                .module(Arrays.asList(
+                        httpBasic(), defaultModule(), tokenAuthModule(), ldapModule()
+                )).build();
+        AuthSettings authSettings = new AuthSettings(true, modules);
+        new CheckedAuthSettings(superUserSpec()).update(authSettings);
+    }
+
     @Test
     public void unauthorizedUserShouldNotHaveRightToCreateProject() {
         var testData = testDataStorage.addTestData();
 
-        new UncheckedProject(unAuthSpec())
+        new UncheckedRequests(unAuthSpec()).getProjectRequest()
                 .create(testData.getProject())
                 .then().assertThat().statusCode(HttpStatus.SC_UNAUTHORIZED);
-        //   .body(Matchers.containsString("Authentication required"));
+              //  .body(containsString("Authentication required"));
 
         uncheckedWithSuperUser.getProjectRequest()
                 .get(testData.getProject().getId())
@@ -44,7 +59,8 @@ public class RolesTest extends BaseApiTest {
 
         checkedWithSuperUser.getUserRequest().create(testData.getUser());
 
-        var project = new CheckedProject(authSpec(testData.getUser()))
+        var project = new CheckedRequests(authSpec(testData.getUser()))
+                .getProjectRequest()
                 .create(testData.getProject());
 
         softy.assertThat(project.getId()).isEqualTo(testData.getProject().getId());
@@ -57,12 +73,13 @@ public class RolesTest extends BaseApiTest {
         checkedWithSuperUser.getProjectRequest().create(testData.getProject());
 
         testData.getUser().setRoles(
-                generateRoles(PROJECT_ADMIN, "p:" + testData.getProject().getId())
+                generateRoles(PROJECT_ADMIN, projectScope(testData.getProject().getId()))
         );
 
         checkedWithSuperUser.getUserRequest().create(testData.getUser());
 
-        var buildConfig = new CheckedBuildConfig(authSpec(testData.getUser()))
+        var buildConfig = new CheckedRequests(authSpec(testData.getUser()))
+                .getBuildConfigRequest()
                 .create(testData.getBuildType());
 
         softy.assertThat(buildConfig.getId()).isEqualTo(testData.getBuildType().getId());
@@ -77,18 +94,19 @@ public class RolesTest extends BaseApiTest {
         checkedWithSuperUser.getProjectRequest().create(secondTestData.getProject());
 
         firstTestData.getUser().setRoles(
-                generateRoles(PROJECT_ADMIN, "p:" + firstTestData.getProject().getId())
+                generateRoles(PROJECT_ADMIN, projectScope(firstTestData.getProject().getId()))
         );
 
         checkedWithSuperUser.getUserRequest().create(firstTestData.getUser());
 
         secondTestData.getUser().setRoles(
-                generateRoles(PROJECT_ADMIN, "p:" + secondTestData.getProject().getId())
+                generateRoles(PROJECT_ADMIN, projectScope(secondTestData.getProject().getId()))
         );
 
         checkedWithSuperUser.getUserRequest().create(secondTestData.getUser());
 
-        new UncheckedBuildConfig(authSpec(secondTestData.getUser()))
+        new UncheckedRequests(authSpec(secondTestData.getUser()))
+                .getBuildConfigRequest()
                 .create(firstTestData.getBuildType())
                 .then().assertThat().statusCode(SC_FORBIDDEN);
     }
