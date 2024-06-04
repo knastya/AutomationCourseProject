@@ -58,8 +58,8 @@ jobs:
           -p 8111:8111 \
           jetbrains/teamcity-server:2023.11.1
 
-      - name: Sleep for 1 minute
-        run: sleep 60s
+      - name: Sleep for 40s
+        run: sleep 40s
 
       - name: Get containers logs
         uses: jwalton/gh-docker-logs@v2
@@ -89,3 +89,49 @@ jobs:
       - name: Run UI tests
         if: always()
         run: ./mvnw test -DsuiteXmlFile=teamcity-suites/ui-suite.xml --no-transfer-progress
+
+      - name: Load test report history
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+            ref: gh-pages
+            path: gh-pages
+
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
+        with:
+            gh_pages: gh-pages
+            allure_history: allure-history
+            allure_results: target/allure-results
+
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_branch: gh-pages
+            publish_dir: allure-history
+
+      # Создание репорта с покрытием API тестов, основанного на Swagger. Документация: https://github.com/viclovsky/swagger-coverage
+      - name: Run Swagger coverage
+        if: always()
+        run: |
+         chmod +x ./swagger-coverage/bin/swagger-coverage-commandline
+         ./swagger-coverage/bin/swagger-coverage-commandline -s http://$HOST:8111/app/rest/swagger.json -i swagger-coverage-output
+
+      - name: Rename report page and move to folder
+        if: always()
+        run: |
+          mkdir coverage
+          mv swagger-coverage-report.html coverage/index.html
+
+      - name: Publish Swagger test report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: coverage
+          destination_dir: coverage
